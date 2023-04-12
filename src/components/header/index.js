@@ -40,9 +40,9 @@ const Header = (props) => {
                         <li><NavLink onClick={ClickHandler} to="/home3">Home style 3</NavLink></li>
                         <li><NavLink onClick={ClickHandler} to="/home4">Home Static Hero</NavLink></li>
                         <li><NavLink onClick={ClickHandler} to="/home5">Home Box Style</NavLink></li>
-                        <li><NavLink onClick={ClickHandler} to="/home6">Home particles Effect</NavLink></li>
+                        <li><NavLink onClick={ClickHandler} to="/home6">Home particles Effect</NavLink></li>                         
                         <li><NavLink onClick={ClickHandler} to="/home7">Home Video Banar</NavLink></li>
-                      */}
+                     */}
                         <li><NavLink onClick={ClickHandler} to="/invitation">Invitation</NavLink></li>
                       </ul>
                     </li>

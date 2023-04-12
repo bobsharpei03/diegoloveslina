@@ -14,9 +14,7 @@ import EventSection from '../../components/EventSection/EventSection';
 import PartnerSection from '../../components/PartnerSection/PartnerSection';
 import BlogSection from '../../components/BlogSection/BlogSection';
 import Footer from '../../components/footer/Footer';
-
-
-
+import BackgroundVideo from '../../js/BackgroundVideo';
 
 const HomePage =() => {
 
@@ -25,7 +23,8 @@ const HomePage =() => {
             <Navbar hclass={'wpo-site-header-s1'}/>
             <Hero/>
             <CoupleSection/>
-            <VideoSection/>
+            <BackgroundVideo/>
+            {/*<VideoSection/>*/}
             <StorySection/>
             <CtaSection/>
             <PortfolioSection/>
