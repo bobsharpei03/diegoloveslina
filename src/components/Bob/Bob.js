@@ -32,7 +32,7 @@ const Bob = (props) => {
                                     <div className="col-lg-7">
                                         <div className="couple-text">
                                             <h3>Bob Sharpei</h3>
-                                            <p>Our story would not be the same without a little wrinkly fellow that showed in our lives. Lina adopted Bob twenty years ago in her native Paramonga. Four years later Bob made the trip to Boston, where we became a family of three. Our Bob lived a happy life until age fifteen. Although he will not be with us for this special event, his precense will be forever in our hearts. 
+                                            <p>Our story would not be the same without a little wrinkly fellow that showed in our lives. Bob was adopted by Lina in her native Paramonga. Four years later Bob made the trip to Boston, where we became a family of three. Bob lived a happy life until age fifteen. Although he will not be with us for this special day, his precense will be forever in our hearts.
                                         </p>
                                             <div className="social">
                                                 <ul>

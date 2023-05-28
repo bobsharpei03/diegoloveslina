@@ -36,7 +36,7 @@ const CoupleSection = (props) => {
                                     <div className="col-lg-7">
                                         <div className="couple-text">
                                             <h3>Lina Flores</h3>
-                                            <p>There are not enough words to describe Lina, but her natural beuaty can only be match by her intelligence, discipline, loyalty, and extreme care and love for family and friends. She is proud of being a Paramonga native and craves the special hot sauce only made by the Anticucheras in Paramonga, Peru.</p>
+                                            <p>There are not enough words to describe Lina, her natural beauty it's match by her intelligence, discipline, loyalty, and extreme love for family and friends. She is proud of being a Paramonga native and secretively craves a hot sauce only made in Paramonga, Peru.</p>
                                             <div className="social">
                                                 <ul>
                                                     <li><Link to="/"><i className="ti-facebook"></i></Link></li>

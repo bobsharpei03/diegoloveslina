@@ -63,7 +63,7 @@ const RSVP = (props) => {
                                     onBlur={(e) => changeHandler(e)}
                                     onChange={(e) => changeHandler(e)}
                                     className="form-control"
-                                    placeholder="Your Name" />
+                                    placeholder="Family Name" />
                                 {validator.message('name', forms.name, 'required|alpha_space')}
                             </div>
                             <div className="form-field">
@@ -98,9 +98,9 @@ const RSVP = (props) => {
                                     <option>Number Of Guests</option>
                                     <option>01</option>
                                     <option>02</option>
-                                    <option>03</option>
+                                 {/*<option>03</option>
                                     <option>04</option>
-                                    <option>05</option>
+                                    <option>05</option>*/}
                                 </select>
                                 {validator.message('guest', forms.guest, 'required')}
                             </div>

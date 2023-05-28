@@ -1,6 +1,6 @@
 import React from "react";
 import SectionTitle from "../SectionTitle";
-import timg1 from '../../images/team/img-1.jpg'
+import timg1 from '../../images/team/patmore.jpg'
 import timg2 from '../../images/team/img-2.jpg'
 import timg3 from '../../images/team/img-3.jpg'
 import timg4 from '../../images/team/img-4.jpg'
@@ -21,31 +21,31 @@ const brideGrooms = [
  {
     id:'2',
     tImg:timg2,
-    name:'Jenny Wilson',
+    name:'Amparo Flores',
     title:'Brides Sister',     
  },
  {
     id:'3',
     tImg:timg3,
-    name:'Robert Fox',
+    name:'Maria Flores',
     title:'Brides Brother',     
  },
  {
     id:'4',
     tImg:timg4,
-    name:'Jerome Bell',
+    name:'Ana Cecilia Flores',
     title:'Groom’s Sister',     
  },
  {
     id:'5',
     tImg:timg5,
-    name:'Esther Howard',
+    name:'German Flores',
     title:'Groom’s Brother',     
  },
  {
     id:'6',
     tImg:timg6,
-    name:'Bessie Cooper',
+    name:'Javier Flores',
     title:'Brides Maid',     
  },
 ]
