@@ -53,7 +53,9 @@ const Header = (props) => {
                     <li><Link activeClass="active" to="event" spy={true} smooth={true} duration={500} >Events</Link></li>
                     <li><Link activeClass="active" to="bob" spy={true} smooth={true} duration={500} >Bob</Link></li>
                     <li className="menu-item-has-children">
-                      <NavLink onClick={ClickHandler} to="/blog">Blog</NavLink>
+                      {/*<NavLink onClick={ClickHandler} to="/blog">Blog</NavLink>*/}
+                      <NavLink onClick={ClickHandler} to="/blog-single-left-sidebar/1">Blog</NavLink>
+                      {/*}
                       <ul className="sub-menu">
                         <li><NavLink onClick={ClickHandler} to="/blog">Blog right sidebar</NavLink></li>
                         <li><NavLink onClick={ClickHandler} to="/blog-left-sidebar">Blog left sidebar</NavLink></li>
@@ -63,13 +65,14 @@ const Header = (props) => {
                           <ul className="sub-menu">
                             <li><NavLink onClick={ClickHandler} to="/blog-single/1">Blog details right sidebar</NavLink>
                             </li>
-                            <li><NavLink onClick={ClickHandler} to="/blog-single-left-sidebar/1">Blog details left
-                              sidebar</NavLink></li>
+                            {/*<li><NavLink onClick={ClickHandler} to="/blog-single-left-sidebar/1">Blog details left
+                             sidebar</NavLink></li> */}
+                            {/*<li><NavLink onClick={ClickHandler} to="/blog">Blog details left sidebar</NavLink></li>
                             <li><NavLink onClick={ClickHandler} to="/blog-single-fullwidth/1">Blog details
                               fullwidth</NavLink></li>
                           </ul>
                         </li>
-                      </ul>
+                      </ul>*/}
                     </li>
                   </ul>
 

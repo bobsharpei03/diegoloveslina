@@ -16,37 +16,43 @@ const brideGrooms = [
     id:'1',
     tImg:timg1,
     name:'Lina Olga Chavez',
-    title:'Brides Mother',     
+    title:'Brides Mother',
+    message: 'Mas conocida como Doña Olgita. Distinguida como solo ella lo puede ser, espera ser el alma de la fiesta'
  },
  {
     id:'2',
     tImg:timg2,
     name:'Amparo Flores',
-    title:'Brides Sister',     
+    title:'Brides Sister',
+    message: 'Amparo es la hermana mayor, "Ella ya sabia que Diego y Lina se iban a casar"' 
  },
  {
     id:'3',
     tImg:timg3,
-    name:'Maria Flores',
-    title:'Brides Brother',     
+    name:'Maria Flores Zena',
+    title:'Brides Sister',
+    message: 'Mariol es la mas "nerviuda" con los preparativos de el matrimonio entre Diego y Lina, ella espera bailar la conga esa noche'
  },
  {
     id:'4',
     tImg:timg4,
     name:'Ana Cecilia Flores',
-    title:'Groom’s Sister',     
+    title:'Bride’s Sister',
+    message: 'Popularmente conocida como la "Cutus", La mas carismatica de las hermanas, ella junto a Amparo, son las que mas esperan la comi-comi'
  },
  {
     id:'5',
     tImg:timg5,
     name:'German Flores',
-    title:'Groom’s Brother',     
+    title:'Bride’s older Brother',
+    message: 'El mayor de los hermanos, espera bailar con el puño arriba toda la noche como en sus tiempos mosos en el Castelo'
  },
  {
     id:'6',
     tImg:timg6,
     name:'Javier Flores',
-    title:'Brides Maid',     
+    title:'Bride’s younger Brother',
+    message: 'Javier parece serio y malhumorado, pero cuando esta en familia siempre pone la picardia'
  },
 ]
 
@@ -71,7 +77,8 @@ const BrideGrooms = (props) => {
                         </div>
                         <div className="wpo-team-text">
                             <h3>{brideGroom.name}</h3>
-                            <span>{brideGroom.title}</span>
+                            <p>{brideGroom.title}</p>
+                            <span>{brideGroom.message}</span>
                         </div>
                     </div>
                 </div>

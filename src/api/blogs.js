@@ -12,7 +12,7 @@ import blogSingleImg3 from "../images/blog/img-6.jpg";
 const blogs = [
     {
         id: '1',
-        title: 'Wedding Bride Hair Style',
+        title: 'Latest News',
         screens: blogImg1,
         description: 'Consectetur adipiscing elit. Bibendum qunulla suspen sed consectetur. Donec porttitor consectetur cras squam sapien massa.',
         author: 'Loura Sweety',

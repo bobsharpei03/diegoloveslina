@@ -89,16 +89,22 @@ const RSVP = (props) => {
             Attend: forms.Attend,
             Email: forms.Email,
             Guest: forms.Guest,
-            Meal: forms.Meal,
+            /*Meal1: forms.Meal1,
+            Meal2: forms.Meal2,*/
             Name: forms.Name,
+            Song1: forms.Song1,
+            Song2: forms.Song2,
             time: new Date(),
         })
         setForms({
             Attend: '',
             Email: '',
             Guest: '',
-            Meal: '',
-            Name: ''
+            /*Meal1: '',
+            Meal2: '',*/
+            Name: '',
+            Song1: '',
+            Song2: ''
         })
     }
 
@@ -113,11 +119,11 @@ const RSVP = (props) => {
                         <div className="radio-buttons">
                                 <p>
                                     {/*<input type="radio" id="attend" name="radio-group" defaultChecked />*/}
-                                    <input value="Yes" type="radio" id="attend" name="Attend" onChange={changeHandler} defaultChecked />
+                                    <input value="Yes" type="radio" id="attend" name="Attend" onChange={(e) => {changeHandler(e)}} />
                                     <label htmlFor="attend">Yes, I will be there</label>
                                 </p>
                                 <p>
-                                    <input value="No" type="radio" id="not" name="Attend" onChange={changeHandler} />
+                                    <input value="No" type="radio" id="not" name="Attend" onChange={(e)=>{changeHandler(e)}} />
                                     <label htmlFor="not">Sorry, I can’t come</label>
                                 </p>
                             </div>
@@ -132,11 +138,8 @@ const RSVP = (props) => {
                                     <option>Number of guests</option>
                                     <option>01</option>
                                     <option>02</option>
-                                 {/*<option>03</option>
-                                    <option>04</option>
-                                    <option>05</option>*/}
                                 </select>
-                                {validator.message('guest', forms.Guest, 'required')}
+                                {validator.message('Guest', forms.Guest, 'required')}
                             </div>
                             <div className="form-field">
                                 <input
@@ -147,7 +150,7 @@ const RSVP = (props) => {
                                     onChange={(e) => changeHandler(e)}
                                     className="form-control"
                                     placeholder="Family Name" />
-                                {validator.message('name', forms.Name, 'required|alpha_space')}
+                                {validator.message('Name', forms.Name, 'required|alpha_space')}
                             </div>
                             <div className="form-field">
                                 <input
@@ -158,27 +161,41 @@ const RSVP = (props) => {
                                     onChange={(e) => changeHandler(e)}
                                     className="form-control"
                                     placeholder="Your Email" />
-                                {validator.message('email', forms.Email, 'required|email')}
+                                {validator.message('Email', forms.Email, 'required|Email')}
+                            </div>
+                            <div className="form-field">
+                                <label>What song you like dancing in the party?</label>
+                                <input
+                                value={forms.Song1}
+                                type="text"
+                                name="Song1"
+                                onBlur={(e) => changeHandler(e)}
+                                onChange={(e) => changeHandler(e)}
+                                className="form-control"
+                                placeholder="I'll like to dance ....." />
+                                {validator.message('Song1', forms.Song1, 'required')}
+                            </div>
+                            <div className="form-field">
+                                <label>What other song you like dancing in the party?</label>
+                                <input
+                                value={forms.Song2}
+                                type="text"
+                                name="Song2"
+                                onBlur={(e) => changeHandler(e)}
+                                onChange={(e) => changeHandler(e)}
+                                className="form-control"
+                                placeholder="I'll like to dance also....." />
+                                {validator.message('Song2', forms.Song2, 'required')}
                             </div>
                             {/*<div className="form-field">
-                                <input
-                                    value={forms.attend}
-                                    type="text"
-                                    name="attend"
-                                    onBlur={(e) => changeHandler(e)}
-                                    onChange={(e) => changeHandler(e)}
-                                    className="form-control"
-                                    placeholder="What Will You Be Attending" />
-                                {validator.message('attend', forms.attend, 'required')}
-                                </div>*/}
-                            <div className="form-field">
+                                <label>First Guest Meal Choice</label>
                                 <select
                                     onBlur={(e) => changeHandler(e)}
                                     onChange={(e) => changeHandler(e)}
-                                    value={forms.Meal}
+                                    value={forms.Meal1}
                                     type="text"
                                     className="form-control"
-                                    name="Meal">
+                                    name="Meal1">
                                     <option>Click the dropdown/ Elija con la flecha hacia abajo</option>
                                     <option>Beef/Res</option>
                                     <option>Chicken/Pollo</option>
@@ -186,8 +203,26 @@ const RSVP = (props) => {
                                     <option>Vegetarian/Vegetariano</option>
                                     <option>Vegan/Vegano</option>
                                 </select>
-                                {validator.message('meal', forms.Meal, 'required')}
-                            </div>
+                             {/*}   {validator.message('meal', forms.Meal1, 'required')}*/}
+                            {/*</div>
+                            <div className="form-field">
+                                <label>Second Guest Meal Choice</label>
+                                <select
+                                    onBlur={(e) => changeHandler(e)}
+                                    onChange={(e) => changeHandler(e)}
+                                    value={forms.Meal2}
+                                    type="text"
+                                    className="form-control"
+                                    name="Meal2">
+                                    <option>Click the dropdown/ Elija con la flecha hacia abajo</option>
+                                    <option>Beef/Res</option>
+                                    <option>Chicken/Pollo</option>
+                                    <option>Fish/Pescado</option>
+                                    <option>Vegetarian/Vegetariano</option>
+                                    <option>Vegan/Vegano</option>
+                                </select>
+                                {/*{validator.message('meal', forms.Meal2, 'required')}*/}
+                           {/* </div>*/}
                             <div className="submit-area">
                                 <button type="submit" className="theme-btn">Submit Now</button>
                                 {/*<button className="theme-btn" onClick={() => addRsvp({ forms, id:uuidv4() })}>Submit Now</button>*/}

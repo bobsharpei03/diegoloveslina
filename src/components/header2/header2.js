@@ -46,22 +46,22 @@ const Header2 = (props) => {
                       </ul>
                     </li>
                     <li>
-                      <Link onClick={ClickHandler} to="/about">About</Link>
+                      <Link onClick={ClickHandler} to="/about">About Us</Link>
                     </li>
-                    <li className="menu-item-has-children">
+                    {/*<li className="menu-item-has-children">
                       <Link onClick={ClickHandler} to="/wedding">Wedding</Link>
                       <ul className="sub-menu">
                         <li><Link onClick={ClickHandler} to="/wedding">Wedding</Link></li>
                         <li><Link onClick={ClickHandler} to="/wedding-details">Wedding Details</Link></li>
                       </ul>
-                    </li>
+                    </li>*/}
                     <li className="menu-item-has-children">
-                      <Link onClick={ClickHandler} to="/gallery">Gallery</Link>
-                      <ul className="sub-menu">
+                      <Link onClick={ClickHandler} to="/gallery">Gallery</Link>                      
+                      {/*<ul className="sub-menu">
                         <li><Link onClick={ClickHandler} to="/gallery">Gallery Style 1</Link></li>
                         <li><Link onClick={ClickHandler} to="/gallery-s2">Gallery Style 2</Link></li>
                         <li><Link onClick={ClickHandler} to="/gallery-slide">Gallery Slide</Link></li>
-                      </ul>
+                      </ul>*/}
                     </li>
                     <li>
                       <Link onClick={ClickHandler} to="/rsvp">RSVP</Link>
@@ -80,8 +80,9 @@ const Header2 = (props) => {
                       </ul>
                     </li>
                     <li className="menu-item-has-children">
-                      <Link onClick={ClickHandler} to="/blog">Blog</Link>
-                      <ul className="sub-menu">
+                      <Link onClick={ClickHandler} to="/blog-single-left-sidebar/1">Blog</Link>
+                      {/*<Link onClick={ClickHandler} to="/blog">Blog</Link>*/}
+                      {/*<ul className="sub-menu">
                         <li><Link onClick={ClickHandler} to="/blog">Blog right sidebar</Link></li>
                         <li><Link onClick={ClickHandler} to="/blog-left-sidebar">Blog left sidebar</Link></li>
                         <li><Link onClick={ClickHandler} to="/blog-fullwidth">Blog fullwidth</Link></li>
@@ -96,10 +97,9 @@ const Header2 = (props) => {
                               fullwidth</Link></li>
                           </ul>
                         </li>
-                      </ul>
+                      </ul>*/}
                     </li>
                   </ul>
-
                 </div>
               </div>
               <div className="col-lg-2 col-md-2 col-2">

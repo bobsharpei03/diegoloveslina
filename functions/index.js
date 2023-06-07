@@ -28,13 +28,14 @@ exports.submit = functions.https.onRequest((req, res) => {
       //   return
       // }
 
+      const htmlContent = `<ul><li>Name: ${req.body.Name}</li><li>Email: ${req.body.Email}</li><li>Are you attending?: ${req.body.Attend}</li><li>Number of Guest: ${req.body.Guest}</li><li>Guest Dance Song1: ${req.body.Song1}</li><li>Guest Dance Song2: ${req.body.Song2}</li></ul>`;
+
       const mailOptions = {
         from: req.body.Email,
         replyTo: req.body.Email,
-        to: gmailEmail,
-        subject: `${req.body.Name} just messaged me from my website`,
-        text: req.body.Meal,
-        html: `<p>${req.body.Meal}</p>`,
+        to: req.body.Email,
+        subject: `${req.body.Name} has send a RSVP `,
+        html: htmlContent
       }
 
       // res.status(200).send(mailOptions);

@@ -19,8 +19,10 @@ const CoupleSection = (props) => {
         <section className={`couple-section section-padding ${props.cClass}`} id="couple">
             <div className="container">
                 <div className="row align-items-center justify-content-center">            
-                <SectionTitle MainTitle={'Welcome to our Wedding Day Page'} />              
-                <p class="special"> Dear family and friends, this celebration is important for us and our families. They already know the love and care we have for each other. At this stage of our lives, perhaps a big wedding was not required to sealed our commitment, but we also wanted to make this day special for all you. This day is for you to laugh, cry, drink, dine and dance with us, this is to celebrate love and friendship, forget the tough times we lived, remember our fun memories and laughters. This is for us to put our glasses up and say "Friend and family, we are here because of you!"</p>            
+                <SectionTitle MainTitle={'A message from the Bride and Groom'} />    
+                <div className='col-lg-9'>          
+                <p class="special"> Dear family and friends, We are thrieled for you can join us on this important day. We hope you are as exited as we are. Most of you already know the love and care we have for each other, you have been wittnes of our pains, challenges as well as our achivements. There were some obsticules for us to take this step earlier on our lives, if we had, the celebration would have been as modest as our pockets could allowed. Instead God reserved this important move  when we felt we could offered you memories that can shined for the rest of our lives. This day is for you to laugh, cry, drink, dine and dance with us, this is to celebrate love and friendship, forget the tough times we lived, remember our fun memories and laughters. This is for us raised our glasses and say: "Friend and family, love always wins"</p>
+                </div>
                     <div className="col col-lg-11">
                         <div className="couple-area clearfix">
                             <div className="couple-item bride">

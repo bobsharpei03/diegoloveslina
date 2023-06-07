@@ -1,23 +1,75 @@
-import React from 'react';
-import { Link } from 'react-router-dom'
-import blog3 from '../../images/blog-details/comments-author/img-1.jpg'
-import blog4 from '../../images/blog-details/comments-author/img-2.jpg'
-import blog5 from '../../images/blog-details/comments-author/img-3.jpg'
-import blog6 from '../../images/blog-details/author.jpg'
-import gl1 from '../../images/blog-details/1.jpg'
-import gl2 from '../../images/blog-details/2.jpg'
+import React, { useState, useEffect} from 'react'
+import { Link } from 'react-router-dom';
+import blog3 from '../../images/blog-details/comments-author/img-1.jpg';
+import blog4 from '../../images/blog-details/comments-author/img-2.jpg';
+import blog5 from '../../images/blog-details/comments-author/img-3.jpg';
+import blog6 from '../../images/blog-details/author.jpg';
+import gl1 from '../../images/blog-details/1.jpg';
+import gl2 from '../../images/blog-details/2.jpg';
 import blogs from '../../api/blogs';
-import { useParams } from 'react-router-dom'
-import BlogSidebar from '../../components/BlogSidebar'
+import { useParams } from 'react-router-dom';
+import BlogSidebar from '../../components/BlogSidebar';
+import {db} from '../../firebase/firebase';
+import {collection, getDocs} from "firebase/firestore";
 
 const BlogSingle = (props) => {
 
-    const { id } = useParams()
+    const { id } = useParams();
+    const BlogDetails = blogs.find(item => item.id === id);
+    const [getDataArray, setDataArray] = useState([]);
+    const [createForm, setForm] = useState({});   
+    const clock = Date.now(); // new Date()
+    const dateNow = new Intl.DateTimeFormat('en-US', {year: 'numeric', month: '2-digit',day: '2-digit', hour: '2-digit', minute: '2-digit', second: '2-digit'}).format(clock);
 
-    const BlogDetails = blogs.find(item => item.id === id)
 
+   const changeHandler = e => {
+        console.log(e.target.name, e.target.value);
+        setForm({ 
+            ...createForm,
+            [e.target.name]: e.target.value
+        })        
+        /*if (validator.allValid()) {
+            validator.hideMessages();
+        } else {
+            validator.showMessages();
+        }*/
+    };
     const submitHandler = (e) => {
         e.preventDefault()
+        postBlog();
+    }
+
+   useEffect(()=>{
+    ;(async()=>{
+    const userCollectionRef = collection(db ,"Blog");
+    //const getBlogs = async () => {
+    const getBlogs = await getDocs(userCollectionRef);
+    const docs = getBlogs.docs.map((doc)=> {
+        const data = doc.data()
+        data.id = doc.id;
+        return data;
+        });
+        setDataArray(docs);
+        console.log('data: ' , docs); 
+            //console.log()
+          //  setData(data.docs.map((doc) => ({ ...doc.data()}))); // spredding operator
+        })()
+        //getBlogs();
+   },[]);
+
+    const postBlog = async () => {
+        console.log("postBlog");
+        db.collection('Blog').add({
+            Email: createForm.Email,
+            Name: createForm.Name,
+            Comments: createForm.Comments,
+            Timestamp: dateNow
+        })
+        setForm({
+            Comments: '',
+            Email: '',
+            Name: '',          
+        })
     }
 
     return (
@@ -30,6 +82,13 @@ const BlogSingle = (props) => {
                                 <div className="entry-media">
                                     <img src={BlogDetails.blogSingleImg} alt="" />
                                 </div>
+                                <br/>
+                                <h2>{BlogDetails.title}</h2>
+                                <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful.</p>
+                                <blockquote>
+                                    Combined with a handful of model sentence structures, generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.
+                                </blockquote>
+                                <p>I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself,</p>
                                 <div className="entry-meta">
                                     <ul>
                                         <li><i className="fi flaticon-user"></i> By <Link to="/blog-single/1">{BlogDetails.author}</Link> </li>
@@ -37,13 +96,6 @@ const BlogSingle = (props) => {
                                         <li><i className="fi flaticon-calendar"></i> {BlogDetails.create_at}</li>
                                     </ul>
                                 </div>
-                                <h2>{BlogDetails.title}</h2>
-                                <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful.</p>
-                                <blockquote>
-                                    Combined with a handful of model sentence structures, generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.
-                                </blockquote>
-                                <p>I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself,</p>
-
                                 <div className="gallery">
                                     <div>
                                         <img src={gl1} alt="" />
@@ -75,7 +127,6 @@ const BlogSingle = (props) => {
                                     </ul>
                                 </div>
                             </div>
-
                             <div className="author-box">
                                 <div className="author-avatar">
                                     <Link to="/blog-single/1" target="_blank"><img src={blog6} alt="" /></Link>
@@ -93,7 +144,6 @@ const BlogSingle = (props) => {
                                     </div>
                                 </div>
                             </div>
-
                             <div className="more-posts">
                                 <div className="previous-post">
                                     <Link to="/blog">
@@ -108,16 +158,41 @@ const BlogSingle = (props) => {
                                     </Link>
                                 </div>
                             </div>
-
                             <div className="comments-area">
                                 <div className="comments-section">
                                     <h3 className="comments-title">Comments</h3>
                                     <ol className="comments">
+                                        {getDataArray.map((question) => {
+                                            return (                                    
                                         <li className="comment even thread-even depth-1" id="comment-1">
                                             <div id="div-comment-1">
                                                 <div className="comment-theme">
                                                     <div className="comment-image"><img src={blog3} alt="" /></div>
+                                                </div>                                                
+                                                <div className="comment-main-area">
+                                                    <div className="comment-wrapper">
+                                                        <div className="comments-meta">
+                                                            <h4>{question.Name} <span className="comments-date">{question.Timestamp}</span></h4>
+                                                        </div>
+                                                        <div className="comment-area">
+                                                            <p>{question.Comments}</p>
+                                                        <div className="comments-reply">
+                                                               {/* <Link className="comment-reply-link" to="/blog-single/1"><span>Reply</span></Link> */}
+                                                            </div>
+                                                        </div>
+                                                    </div>
                                                 </div>
+                                            </div>
+                                            <br />
+                                        </li>
+                                        );
+                                        })}
+                                        {/*
+                                        <li className="comment even thread-even depth-1" id="comment-1">
+                                            <div id="div-comment-1">
+                                                <div className="comment-theme">
+                                                    <div className="comment-image"><img src={blog3} alt="" /></div>
+                                                </div>                                                
                                                 <div className="comment-main-area">
                                                     <div className="comment-wrapper">
                                                         <div className="comments-meta">
@@ -126,16 +201,15 @@ const BlogSingle = (props) => {
                                                         </div>
                                                         <div className="comment-area">
                                                             <p>I will give you a complete account of the system, and
-                                                                expound the actual teachings of the great explorer of
-                                                                the truth, </p>
-                                                            <div className="comments-reply">
-                                                                <Link className="comment-reply-link" to="/blog-single/1"><span>Reply</span></Link>
+                                                                expound the actual teachings of the great explorer of the truth, </p>
+                                                        <div className="comments-reply">
+                                                               {/* <Link className="comment-reply-link" to="/blog-single/1"><span>Reply</span></Link> 
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                            <ul className="children">
+                                            </div>*/}                                            
+                                            {/* <ul className="children">
                                                 <li className="comment">
                                                     <div>
                                                         <div className="comment-theme">
@@ -152,7 +226,7 @@ const BlogSingle = (props) => {
                                                                         and expound the actual teachings of the great
                                                                         explorer of the truth, </p>
                                                                     <div className="comments-reply">
-                                                                        <Link className="comment-reply-link" to="/blog-single/1"><span>Reply</span></Link>
+                                                                     {/* <Link className="comment-reply-link" to="/blog-single/1"><span>Reply</span></Link> 
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -175,7 +249,7 @@ const BlogSingle = (props) => {
                                                                                 system, and expound the actual teachings
                                                                                 of the great explorer of the truth, </p>
                                                                             <div className="comments-reply">
-                                                                                <Link className="comment-reply-link" to="/blog-single/1"><span>Reply</span></Link>
+                                                                              {/* <Link className="comment-reply-link" to="/blog-single/1"><span>Reply</span></Link> 
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -184,43 +258,23 @@ const BlogSingle = (props) => {
                                                         </li>
                                                     </ul>
                                                 </li>
-                                            </ul>
-                                        </li>
-                                        <li className="comment">
-                                            <div>
-                                                <div className="comment-theme">
-                                                    <div className="comment-image"><img src={blog3} alt="" /></div>
-                                                </div>
-                                                <div className="comment-main-area">
-                                                    <div className="comment-wrapper">
-                                                        <div className="comments-meta">
-                                                            <h4>John Abraham <span className="comments-date">January 12,2022
-                                                                At 9.00am</span></h4>
-                                                        </div>
-                                                        <div className="comment-area">
-                                                            <p>I will give you a complete account of the system, and
-                                                                expound the actual teachings of the great explorer of
-                                                                the truth, </p>
-                                                            <div className="comments-reply">
-                                                                <Link className="comment-reply-link" to="/blog-single/1"><span>Reply</span></Link>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </li>
+                                                </ul>                                       
+                                        </li>*/}                                      
                                     </ol>
                                 </div>
                                 <div className="comment-respond">
-                                    <h3 className="comment-reply-title">Post Comments</h3>
+                                    <h3 className="comment-reply-title">Post Comments or Questions</h3>
                                     <form onSubmit={submitHandler} id="commentform" className="comment-form">
+                                        <div className="">
+                                        <input value={createForm.Name} type="text" name="Name" onBlur={(e) => changeHandler(e)} onChange={(e) => changeHandler(e)} placeholder="Name" />
+                                        <input value={createForm.Email} type="text" name="Email" onBlur={(e) => changeHandler(e)} onChange={(e) => changeHandler(e)} placeholder="Email" />
+                                        </div>
                                         <div className="form-textarea">
-                                            <textarea id="comment" placeholder="Write Your Comments..."></textarea>
+                                            {/*<textarea id="comment" placeholder="Write Your Comments..."></textarea>*/}
+                                            <textarea value={createForm.Comments} id="comments" name="Comments" onBlur={(e) => changeHandler(e)} onChange={(e) => changeHandler(e)} placeholder="Write Your Comments" ></textarea>
                                         </div>
                                         <div className="form-inputs">
-                                            <input placeholder="Website" type="url" />
-                                            <input placeholder="Name" type="text" />
-                                            <input placeholder="Email" type="email" />
+                                            {/*<input placeholder="Website" type="url" */}                        
                                         </div>
                                         <div className="form-submit">
                                             <input id="submit" value="Post Comment" type="submit" />
@@ -235,7 +289,6 @@ const BlogSingle = (props) => {
             </div>
         </section>
     )
-
 }
 
 export default BlogSingle;

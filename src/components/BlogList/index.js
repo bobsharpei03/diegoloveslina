@@ -5,8 +5,6 @@ import VideoModal from '../../components/ModalVideo'
 
 import blogs from '../../api/blogs'
 
-
-
 const BlogList = (props) => {
 
     const ClickHandler = () =>{
