@@ -13,7 +13,6 @@ const mailTransport = nodemailer.createTransport({
     pass: gmailPassword,
   },
 })
-
 exports.submit = functions.https.onRequest((req, res) => {
   
   // res.set('Access-Control-Allow-Origin', '*')
@@ -27,17 +26,16 @@ exports.submit = functions.https.onRequest((req, res) => {
       // if (req.method !== 'POST') {
       //   return
       // }
-
-      const htmlContent = `<ul><li>Name: ${req.body.Name}</li><li>Email: ${req.body.Email}</li><li>Are you attending?: ${req.body.Attend}</li><li>Number of Guest: ${req.body.Guest}</li><li>Guest Dance Song1: ${req.body.Song1}</li><li>Guest Dance Song2: ${req.body.Song2}</li></ul>`;
+      const toEmail = 'linafloresch@gmail.com';
+      const htmlContent = `<ul<li>Congratulations! You have received an RSVP, details below </li>><li>Name: ${req.body.Name}</li><li>Email: ${req.body.Email}</li><li>Are you attending?: ${req.body.Attend}</li><li>Guest Dance Song1: ${req.body.Song1}</li><li>Guest Dance Song2: ${req.body.Song2}</li></ul>`;
 
       const mailOptions = {
         from: req.body.Email,
         replyTo: req.body.Email,
-        to: req.body.Email,
+        to: toEmail,
         subject: `${req.body.Name} has send a RSVP `,
         html: htmlContent
       }
-
       // res.status(200).send(mailOptions);
 
       return mailTransport.sendMail(mailOptions).then(() => {

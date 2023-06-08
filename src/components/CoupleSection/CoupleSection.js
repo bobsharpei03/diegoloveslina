@@ -21,7 +21,7 @@ const CoupleSection = (props) => {
                 <div className="row align-items-center justify-content-center">            
                 <SectionTitle MainTitle={'A message from the Bride and Groom'} />    
                 <div className='col-lg-9'>          
-                <p class="special"> Dear family and friends, We are thrieled for you can join us on this important day. We hope you are as exited as we are. Most of you already know the love and care we have for each other, you have been wittnes of our pains, challenges as well as our achivements. There were some obsticules for us to take this step earlier on our lives, if we had, the celebration would have been as modest as our pockets could allowed. Instead God reserved this important move  when we felt we could offered you memories that can shined for the rest of our lives. This day is for you to laugh, cry, drink, dine and dance with us, this is to celebrate love and friendship, forget the tough times we lived, remember our fun memories and laughters. This is for us raised our glasses and say: "Friend and family, love always wins"</p>
+                <p class="special"> Dear family and friends, We are thrilled you can join us on this important day. We hope you are as excited as we are. Most of you already know the love and care we have for each other, you have been wittneses of our challenges as well as our achievements. There were some obstacules for us to take this step earlier on our lives, if we had, the celebration would have been as modest as our pockets could allowed. Instead God reserved this important move when we felt we could offered memories that can shine for the rest of our lives. This day is for you to laugh, cry, drink, dine and dance with us, this is to celebrate love and friendship, forget the tough times we lived, remember our fun memories and laughters. This is for us raised our glasses and say: "Friend and family, love always wins"</p>
                 </div>
                     <div className="col col-lg-11">
                         <div className="couple-area clearfix">
@@ -56,7 +56,7 @@ const CoupleSection = (props) => {
                                     <div className="col-lg-7 order-lg-1 order-2">
                                         <div className="couple-text">
                                             <h3>Diego Maquill</h3>
-                                            <p>Diego's friends would know this is not his first journey to the altar, but his friends also knew that the one with Lina, will be the one that counts. Diego confesses there is a before Lina and a after Lina, admiting he has found true love by her side. This October, Diego will be relocated to stormy Buffalo for his new job, he hopes bad weather is not an issue for Lina. </p>
+                                            <p>Diego's caught everyone by surprise on Christmas night when he proposed to Lina. He confesses there is a before Lina and a after Lina, admiting he has found nothing but true love by her side. Sometime after the wedding, Diego and Lina will be relocating to stormy Buffalo for his new job, he hopes bad weather is not an issue for Lina. </p>
                                             <div className="social">
                                                 <ul>
                                                     <li><Link to="/"><i className="ti-facebook"></i></Link></li>
