@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route, } from "react-router-dom";
+import { HashRouter, BrowserRouter, Routes, Route, } from "react-router-dom";
 
 import Homepage from '../HomePage'
 import Homepage2 from '../HomePage2/HomePage2'
@@ -36,7 +36,7 @@ const AllRoute = () => {
 
   return (
     <div className="App">
-      <BrowserRouter>
+      <HashRouter>
         <Routes>
           <Route path='/' element={<Homepage />} />
           <Route path='home' element={<Homepage />} />
@@ -70,8 +70,7 @@ const AllRoute = () => {
           <Route path='register' element={<SignUpPage />} />
           <Route path='forgot-password' element={<ForgotPassword />} />
         </Routes>
-      </BrowserRouter>
-
+      </HashRouter>
     </div>
   );
 }
