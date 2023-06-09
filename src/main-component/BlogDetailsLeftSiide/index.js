@@ -8,7 +8,6 @@ import { useParams } from 'react-router-dom'
 import blogs from '../../api/blogs'
 import Footer from '../../components/footer/Footer';
 
-//const BlogDetailsLeftSiide =() => {
 const BlogDetailsLeftSiide =() => {
     const { id } = useParams()
     const BlogDetails = blogs.find(item => item.id === id)
