@@ -32,7 +32,7 @@ const Header = (props) => {
                   <button className="menu-close"><i className="ti-close"></i></button>
                   <ul className="nav navbar-nav mb-2 mb-lg-0">
                     <li className="menu-item-has-children">
-                      <Link activeClass="active" to="home" spy={true} smooth={true} duration={500} >Home</Link>
+                      <Link activeClass="active" to="hero3" spy={true} smooth={true} duration={500} >Home</Link>
                       <ul className="sub-menu">
                         {/*<li><NavLink onClick={ClickHandler} to="/home">Home style 1</NavLink></li>
                         <li><NavLink onClick={ClickHandler} to="/home2">Home style 2</NavLink></li>
@@ -48,7 +48,7 @@ const Header = (props) => {
                     <li><Link activeClass="active" to="bob" spy={true} smooth={true} duration={500} >Bob</Link></li>
                     <li><Link activeClass="active" to="story" spy={true} smooth={true} duration={500} >Story</Link></li>
                     <li><Link activeClass="active" to="gallery" spy={true} smooth={true} duration={500} >Gallery</Link></li>
-                    <li><NavLink onClick={ClickHandler} to="/honneymoon">Gift for the Couple</NavLink></li>
+                    <li><Link activeClass="active" to="giftbox" spy={true} smooth={true} duration={500}>Bridal Gift</Link></li>
                     {/*<li><Link activeClass="active" to="RSVP" spy={true} smooth={true} duration={500} >RSVP</Link></li>*/}
                     {/*<li><Link activeClass="active" to="bridegroom" spy={true} smooth={true} duration={500} >Family Members</Link></li>*/}
                     <li><Link activeClass="active" to="event" spy={true} smooth={true} duration={500} >Details</Link></li>

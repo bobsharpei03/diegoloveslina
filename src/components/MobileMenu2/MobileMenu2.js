@@ -109,7 +109,16 @@ const menus = [
         title: 'RSVP',
         link: '/RSVP',
     },
-
+    {
+        id: 8,
+        title: 'Bridal Gift',
+        link: '/giftbox',
+    },
+    {
+        id: 9,
+        title: 'Bob',
+        link: '/Bob',
+    },
     {
         id: 5,
         title: 'Pages',
@@ -160,7 +169,7 @@ const menus = [
 
     {
         id: 6,
-        title: 'Blog',
+        title: 'Contact',
         link: '/blog',
         submenu: [
             {
@@ -195,9 +204,6 @@ const menus = [
             },
         ]
     }
-    
-
-
 ]
 
 

@@ -148,14 +148,15 @@ const MobileMenu = () => {
                         )
                     })}
                     <li><Link activeClass="active" to="couple" spy={true} smooth={true} duration={500} >Couple</Link></li>
+                    <li><Link activeClass="active" to="Bob" spy={true} smooth={true} duration={500} >Bob</Link></li>
                     <li><Link activeClass="active" to="story" spy={true} smooth={true} duration={500} >Story</Link></li>
                     <li><Link activeClass="active" to="gallery" spy={true} smooth={true} duration={500} >Gallery</Link></li>
                     <li><Link activeClass="active" to="RSVP" spy={true} smooth={true} duration={500} >RSVP</Link></li>
-                    <li><Link activeClass="active" to="bridgegroom" spy={true} smooth={true} duration={500} >Family Members</Link></li>
-                    <li><Link activeClass="active" to="event" spy={true} smooth={true} duration={500} >Events</Link></li>
-                    <li><Link activeClass="active" to="Bob" spy={true} smooth={true} duration={500} >Bob</Link></li>
+                    <li><Link activeClass="active" to="giftbox" spy={true} smooth={true} duration={500}>Bridal Gift</Link></li>
+                    {/*<li><Link activeClass="active" to="bridgegroom" spy={true} smooth={true} duration={500} >Family Members</Link></li>*/}
+                    <li><Link activeClass="active" to="event" spy={true} smooth={true} duration={500} >Details</Link></li>
+                    <li><NavLink onClick={ClickHandler} to="/blog-single-left-sidebar/1">Contact</NavLink></li>
                 </ul>
-
             </div>
 
             <div className="showmenu" onClick={() => setMenuState(!menuActive)}>

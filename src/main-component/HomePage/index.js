@@ -10,6 +10,7 @@ import PortfolioSection from '../../components/PortfolioSection/PortfolioSection
 import RSVP from '../../components/RSVP';
 import CtaSection from '../../components/CtaSection/CtaSection';
 import BrideGrooms from '../../components/BrideGrooms/BrideGrooms';
+import GiftBox from '../../components/GiftBox/giftbox';
 import EventSection from '../../components/EventSection/EventSection';
 import PartnerSection from '../../components/PartnerSection/PartnerSection';
 import BlogSection from '../../components/BlogSection/BlogSection';
@@ -31,6 +32,7 @@ const HomePage =() => {
             <CtaSection/>
             <PortfolioSection/>
             <RSVP/>
+            <GiftBox/>
             <BrideGrooms/>
             <EventSection/>
             <Bob/>

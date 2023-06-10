@@ -12,11 +12,11 @@ import hero3 from '../../images/slider/slide-3.jpg'
 
 const Hero3 = (props) => {
     return (
-        <section className="wpo-hero-slider wpo-hero-style-3">
+        <section className="wpo-hero-slider wpo-hero-style-3" id="hero3">
             <div className="wedding-announcement">
                 <div className="couple-text">
                     <h2>Lina & Diego</h2>
-                    <p>We Are Getting Married Sep 3, 2022</p>
+                    <p>We Are Getting Married Sep 3, 2023</p>
                     <div className="wpo-wedding-date">
                         <div className="clock-grids">
                             <TimeCountDown/>

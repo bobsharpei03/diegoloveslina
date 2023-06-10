@@ -5,7 +5,7 @@ import shape2 from '../../images/slider/flower2.png';
 
 const GiftBox = (props) => {
     return (
-        <section className="static-hero-s3">
+        <section className="static-hero-s3" id="giftbox">
             <div className="hero-container">
                 <div className="hero-inner">
                     <div className="container">
