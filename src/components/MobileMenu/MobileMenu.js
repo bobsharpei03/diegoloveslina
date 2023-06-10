@@ -52,6 +52,11 @@ const menus = [
                 title: 'Invitation',
                 link: '/invitation'
             },
+            {
+                id: 15,
+                title: 'HonneyMoon',
+                link: '/honneymoon'
+            },
         ]
     },
     {
@@ -146,6 +151,7 @@ const MobileMenu = () => {
                     <li><Link activeClass="active" to="story" spy={true} smooth={true} duration={500} >Story</Link></li>
                     <li><Link activeClass="active" to="gallery" spy={true} smooth={true} duration={500} >Gallery</Link></li>
                     <li><Link activeClass="active" to="RSVP" spy={true} smooth={true} duration={500} >RSVP</Link></li>
+                    <li><Link activeClass="active" to="bridgegroom" spy={true} smooth={true} duration={500} >Family Members</Link></li>
                     <li><Link activeClass="active" to="event" spy={true} smooth={true} duration={500} >Events</Link></li>
                     <li><Link activeClass="active" to="Bob" spy={true} smooth={true} duration={500} >Bob</Link></li>
                 </ul>

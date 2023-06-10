@@ -1,5 +1,6 @@
 import React, { Fragment } from 'react';
 import Navbar2 from '../../components/Navbar2';
+import Navbar1 from '../../components/Navbar';
 import Hero3 from '../../components/hero3/Hero3';
 import Scrollbar from '../../components/scrollbar'
 import CoupleSection from '../../components/CoupleSection/CoupleSection';

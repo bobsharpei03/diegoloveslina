@@ -51,6 +51,11 @@ const menus = [
                 title: 'Invitation',
                 link: '/invitation'
             },
+            {
+                id: 15,
+                title: 'HonneyMoon',
+                link: '/honneymoon'
+            },
         ]
     },
 

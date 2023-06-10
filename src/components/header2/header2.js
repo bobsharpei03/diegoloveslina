@@ -42,12 +42,13 @@ const Header2 = (props) => {
                         <li><Link onClick={ClickHandler} to="/home6">Home particles Effect</Link></li>
                         <li><Link onClick={ClickHandler} to="/home7">Home Video Banar</Link></li>
                       */}
-                        <li><Link onClick={ClickHandler} to="/invitation">Invitation</Link></li>
+                        <li><Link onClick={ClickHandler} to="/invitation">Invitation</Link></li>                       
                       </ul>
                     </li>
-                    <li>
-                      <Link onClick={ClickHandler} to="/about">About Us</Link>
-                    </li>
+                    <li><Link onClick={ClickHandler} to="/about">About Us</Link></li>
+                    <li><Link onClick={ClickHandler} to="/bob">Bob</Link></li>
+                    <li><Link onClick={ClickHandler} to="/honneymoon">Gift for the Couple</Link></li>
+                
                     {/*<li className="menu-item-has-children">
                       <Link onClick={ClickHandler} to="/wedding">Wedding</Link>
                       <ul className="sub-menu">
@@ -63,9 +64,7 @@ const Header2 = (props) => {
                         <li><Link onClick={ClickHandler} to="/gallery-slide">Gallery Slide</Link></li>
                       </ul>*/}
                     </li>
-                    <li>
-                      <Link onClick={ClickHandler} to="/rsvp">RSVP</Link>
-                    </li>
+                    {/*<li><Link onClick={ClickHandler} to="/rsvp">RSVP</Link></li>*/}
                     <li className="menu-item-has-children">
                       <Link onClick={ClickHandler} to="/story">pages</Link>
                       <ul className="sub-menu">
@@ -80,7 +79,7 @@ const Header2 = (props) => {
                       </ul>
                     </li>
                     <li className="menu-item-has-children">
-                      <Link onClick={ClickHandler} to="/blog-single-left-sidebar/1">Blog</Link>
+                      <Link onClick={ClickHandler} to="/blog-single-left-sidebar/1">Contact</Link>
                       {/*<Link onClick={ClickHandler} to="/blog">Blog</Link>*/}
                       {/*<ul className="sub-menu">
                         <li><Link onClick={ClickHandler} to="/blog">Blog right sidebar</Link></li>
@@ -104,7 +103,7 @@ const Header2 = (props) => {
               </div>
               <div className="col-lg-2 col-md-2 col-2">
                 <div className="header-right">
-                  <Link className="theme-btn" to="/rsvp"><span className="text">Attend Now</span> <span className="mobile">
+                  <Link className="theme-btn" to="/rsvp"><span className="text">RSVP</span> <span className="mobile">
                     <i className="fi flaticon-user"></i>
                   </span></Link>
                 </div>

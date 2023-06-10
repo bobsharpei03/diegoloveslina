@@ -15,13 +15,15 @@ import PartnerSection from '../../components/PartnerSection/PartnerSection';
 import BlogSection from '../../components/BlogSection/BlogSection';
 import Footer from '../../components/footer/Footer';
 import BackgroundVideo from '../../js/BackgroundVideo';
+import Hero3 from '../../components/hero3/Hero3';
 
 const HomePage =() => {
 
     return(
         <Fragment>
             <Navbar hclass={'wpo-site-header-s1'}/>
-            <Hero/>
+            {/*<Hero/>*/}
+            <Hero3/>
             <CoupleSection/>
             <BackgroundVideo/>
             {/*<VideoSection/>*/}

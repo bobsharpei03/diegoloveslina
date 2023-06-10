@@ -1,7 +1,6 @@
-import React from 'react'
-import LocationMap from '../Modal'
-import SectionTitleS2 from '../SectionTitleS2'
-
+import React from 'react';
+import LocationMap from '../Modal';
+import SectionTitleS2 from '../SectionTitleS2';
 
 const Events = [
     {

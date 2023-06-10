@@ -1,6 +1,6 @@
 import React from "react";
 import SectionTitle from "../SectionTitle";
-import timg1 from '../../images/team/patmore.jpg'
+import timg1 from '../../images/team/img-1.jpg'
 import timg2 from '../../images/team/img-2.jpg'
 import timg3 from '../../images/team/img-3.jpg'
 import timg4 from '../../images/team/img-4.jpg'
@@ -60,7 +60,7 @@ const brideGrooms = [
 const BrideGrooms = (props) => {
 
   return (
-      <section className={`wpo-team-section ${props.tClass}`}>
+      <section className={`wpo-team-section ${props.tClass}`} id="bridegroom">
         <div className="container">
           <SectionTitle MainTitle={'Bridesmaids & Groomsmen'} />
           <div className="wpo-team-wrap">

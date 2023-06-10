@@ -17,40 +17,47 @@ const Brides = [
   {
     id:'1',
     tImg:timg1,
-    name:'Lina Chavez',
-    title:'Brides Mother',     
+    name:'Lina Olga Chavez',
+    title:'Brides Mother',
+    message: 'Mas conocida como Doña Olgita. Distinguida como solo ella lo puede ser, espera ser el alma de la fiesta'
  },
  {
     id:'2',
     tImg:timg2,
-    name:'Jenny Wilson',
-    title:'Brides Sister',     
+    name:'Amparo Flores',
+    title:'Brides Sister',
+    message: 'Amparo es la hermana mayor, "Ella ya sabia que Diego y Lina se iban a casar"' 
  },
  {
     id:'3',
     tImg:timg3,
-    name:'Robert Fox',
-    title:'Brides Brother',     
- }
+    name:'Maria Flores Zena',
+    title:'Brides Sister',
+    message: 'Mariol es la mas "nerviuda" con los preparativos de el matrimonio entre Diego y Lina, ella espera bailar la conga esa noche'
+ },
+
 ]
 const Grooms = [
- {
+  {
     id:'1',
     tImg:timg4,
-    name:'Jerome Bell',
-    title:'Groom’s Sister',     
+    name:'Ana Cecilia Flores',
+    title:'Bride’s Sister',
+    message: 'Popularmente conocida como la "Cutus", La mas carismatica de las hermanas, ella junto a Amparo, son las que mas esperan la comi-comi'
  },
  {
     id:'2',
     tImg:timg5,
-    name:'Esther Howard',
-    title:'Groom’s Brother',     
+    name:'German Flores',
+    title:'Bride’s older Brother',
+    message: 'El mayor de los hermanos, espera bailar con el puño arriba toda la noche como en sus tiempos mosos en el Castelo'
  },
  {
     id:'3',
     tImg:timg6,
-    name:'Bessie Cooper',
-    title:'Brides Maid',     
+    name:'Javier Flores',
+    title:'Bride’s younger Brother',
+    message: 'Javier parece serio y malhumorado, pero cuando esta en familia siempre pone la picardia'
  },
 ]
 

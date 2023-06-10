@@ -9,6 +9,7 @@ import HomePage5 from '../HomePage5/HomePage5';
 import HomePage6 from '../HomePage6/HomePage6';
 import HomePage7 from '../HomePage7/HomePage7';
 import InvitationPage from '../InvitationPage/InvitationPage';
+import HonneyMoon from '../HonneyMoon/HonneyMoon';
 import AboutPage from '../AboutPage/AboutPage';
 import WeddingPage from '../WeddingPage/WeddingPage';
 import WeddingDetailsPage from '../WeddingDetailsPage/WeddingDetailsPage';
@@ -21,6 +22,7 @@ import AccomodationPage from '../AccomodationPage/AccomodationPage'
 import EventPage from '../EventPage/EventPage';
 import BrideGroomPage from '../BrideGroomPage/BrideGroomPage';
 import BlogPage from '../BlogPage'
+import BobPage from '../BobPage';
 import BlogPageLeft from '../BlogPageLeft'
 import BlogPageFullwidth from '../BlogPageFullwidth'
 import BlogDetails from '../BlogDetails'
@@ -47,6 +49,7 @@ const AllRoute = () => {
           <Route path='home6' element={<HomePage6 />} />
           <Route path='home7' element={<HomePage7 />} />
           <Route path='invitation' element={<InvitationPage />} />
+          <Route path='honneymoon' element={<HonneyMoon />} />
           <Route path='about' element={<AboutPage />} />
           <Route path='wedding' element={<WeddingPage />} />
           <Route path='wedding-details' element={<WeddingDetailsPage />} />
@@ -60,6 +63,7 @@ const AllRoute = () => {
           <Route path='groom-bride' element={<BrideGroomPage />} />
           <Route path='coming' element={<ComingSoonPage />} />
           <Route path='404' element={<ErrorPage />} />
+          <Route path='bob' element={<BobPage />} />
           <Route path='blog-single/:id' element={<BlogDetails />} />
           <Route path='blog-single-left-sidebar/:id' element={<BlogDetailsLeftSiide />} />
           <Route path='blog-single-fullwidth/:id' element={<BlogDetailsFull />} />

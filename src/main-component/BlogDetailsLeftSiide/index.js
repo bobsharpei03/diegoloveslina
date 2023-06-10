@@ -16,7 +16,7 @@ const BlogDetailsLeftSiide =() => {
         <Fragment>
             {/*<Navbar1/>*/}
             <Navbar2/>
-            <PageTitle pageTitle={BlogDetails.title} pagesub={'Blog'}/>
+            <PageTitle pageTitle={BlogDetails.title} />
             {/*<PageTitle pageTitle={'Latest News'} pagesub={'Blog'}/>*/}
             <BlogSingle blLeft={'order-lg-1'} blRight={'order-lg-2'}/>
             <Scrollbar/>
