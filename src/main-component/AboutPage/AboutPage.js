@@ -13,7 +13,7 @@ const AboutPage =() => {
     return(
         <Fragment>
             <Navbar2/>
-            <PageTitle pageTitle={'About Us'} pagesub={'About'}/> 
+            <PageTitle pageTitle={'The Couple'} pagesub={'About'}/> 
             <CoupleSection cClass={'couple-section-s2'}/>
             <WeddingTime/>
             <StorySection2/>

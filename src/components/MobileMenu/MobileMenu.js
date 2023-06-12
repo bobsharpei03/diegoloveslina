@@ -10,8 +10,10 @@ const menus = [
     {
         id: 1,
         title: 'Home',
-        link: '/home',
+        link: '/home3',
+        /*
         submenu: [
+            
             {
                 id: 11,
                 title: 'Home style 1',
@@ -46,23 +48,15 @@ const menus = [
                 id: 18,
                 title: 'Home Video Banar',
                 link: '/home7'
-            },
-            {
-                id: 14,
-                title: 'Invitation',
-                link: '/invitation'
-            },
-            {
-                id: 15,
-                title: 'HonneyMoon',
-                link: '/honneymoon'
-            },
+            }, 
         ]
+        */
     },
     {
         id: 6,
-        title: 'Blog',
-        link: '/blog',
+        title: 'Contact',
+        link: '/blog-single-left-sidebar/1',
+        /*
         submenu: [
             {
                 id: 61,
@@ -95,9 +89,8 @@ const menus = [
                 link: '/blog-single-fullwidth/1'
             },
         ]
+        */
     }
-
-
 ]
 
 

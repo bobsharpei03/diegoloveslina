@@ -30,10 +30,9 @@ const Header2 = (props) => {
                 <div id="navbar" className="collapse navbar-collapse navigation-holder">
                   <button className="menu-close"><i className="ti-close"></i></button>
                   <ul className="nav navbar-nav mb-2 mb-lg-0">
-                    <li className="menu-item-has-children">
-                      <Link to="/home">Home</Link>
-                      <ul className="sub-menu">
-                       {/*
+                    {/*<li className="menu-item-has-children">*/}
+                      <li><Link to="/home">Home</Link>
+                      {/*<ul className="sub-menu">                       
                         <li><Link onClick={ClickHandler} to="/home">Home style 1</Link></li>
                         <li><Link onClick={ClickHandler} to="/home2">Home style 2</Link></li>
                         <li><Link onClick={ClickHandler} to="/home3">Home style 3</Link></li>
@@ -41,14 +40,12 @@ const Header2 = (props) => {
                         <li><Link onClick={ClickHandler} to="/home5">Home Box Style</Link></li>
                         <li><Link onClick={ClickHandler} to="/home6">Home particles Effect</Link></li>
                         <li><Link onClick={ClickHandler} to="/home7">Home Video Banar</Link></li>
-                      */}
-                        <li><Link onClick={ClickHandler} to="/invitation">Invitation</Link></li>                       
-                      </ul>
+                        <li><Link onClick={ClickHandler} to="/invitation">Invitation</Link></li>
+                        </ul>*/}
                     </li>
                     <li><Link onClick={ClickHandler} to="/about">About Us</Link></li>
                     <li><Link onClick={ClickHandler} to="/bob">Bob</Link></li>
-                    <li><Link onClick={ClickHandler} to="/honneymoon">Gift for the Couple</Link></li>
-                
+                    <li><Link onClick={ClickHandler} to="/honneymoon">Bridal Gift</Link></li>                
                     {/*<li className="menu-item-has-children">
                       <Link onClick={ClickHandler} to="/wedding">Wedding</Link>
                       <ul className="sub-menu">
@@ -72,14 +69,15 @@ const Header2 = (props) => {
                         <li><Link onClick={ClickHandler} to="/accomodation">Accomodation</Link></li>
                         <li><Link onClick={ClickHandler} to="/event">When & Where</Link></li>
                         <li><Link onClick={ClickHandler} to="/groom-bride">Bridesmaid & Groomsman</Link></li>
-                        <li><Link onClick={ClickHandler} to="/coming">Coming Soon</Link></li>
-                        <li><Link onClick={ClickHandler} to="/404">404 Error</Link></li>
+                        <li><Link onClick={ClickHandler} to="/coming">Set Up a reminder</Link></li>
+                        <li><Link onClick={ClickHandler} to="/invitation">Invitation</Link></li>   
+                        {/*<li><Link onClick={ClickHandler} to="/404">404 Error</Link></li>
                         <li><Link onClick={ClickHandler} to="/login">Login</Link></li>
-                        <li><Link onClick={ClickHandler} to="/register">Register</Link></li>
+                    <li><Link onClick={ClickHandler} to="/register">Sign Up</Link></li>*/}
                       </ul>
                     </li>
                     <li className="menu-item-has-children">
-                      <Link onClick={ClickHandler} to="/blog-single-left-sidebar/1">Contact</Link>
+                      <Link onClick={ClickHandler} to="/blog-single-left-sidebar/1">Contact Us</Link>
                       {/*<Link onClick={ClickHandler} to="/blog">Blog</Link>*/}
                       {/*<ul className="sub-menu">
                         <li><Link onClick={ClickHandler} to="/blog">Blog right sidebar</Link></li>
@@ -104,7 +102,8 @@ const Header2 = (props) => {
               <div className="col-lg-2 col-md-2 col-2">
                 <div className="header-right">
                   <Link className="theme-btn" to="/rsvp"><span className="text">RSVP</span> <span className="mobile">
-                    <i className="fi flaticon-user"></i>
+                    {/*<i className="fi flaticon-user"></i>*/}
+                    <i className="fi flaticon-wedding-rings"></i>
                   </span></Link>
                 </div>
               </div>

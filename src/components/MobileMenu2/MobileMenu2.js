@@ -9,8 +9,10 @@ const menus = [
     {
         id: 1,
         title: 'Home',
-        link: '/home',
+        link: '/home3',
+        /*
         submenu: [
+            /*
             {
                 id: 11,
                 title: 'Home style 1',
@@ -46,29 +48,35 @@ const menus = [
                 title: 'Home Video Banar',
                 link: '/home7'
             },
+            
             {
                 id: 14,
                 title: 'Invitation',
                 link: '/invitation'
             },
-            {
-                id: 15,
-                title: 'HonneyMoon',
-                link: '/honneymoon'
-            },
         ]
+        */
     },
 
     {
         id: 2,
-        title: 'About',
+        title: 'The Couple',
         link: '/about',
+        /*
+        submenu: [
+            {
+                id: 21,
+                title: 'Invitation',
+                link: '/invitation'
+            },
+        ]*/
     },
-
+/*
     {
         id: 3,
-        title: 'Wedding',
+        title: 'The Wedding',
         link: '/wedding',
+        
         submenu: [
             {
                 id: 31,
@@ -81,11 +89,13 @@ const menus = [
                 link: '/wedding-details'
             },
         ]
-    },
+        
+    },*/
     {
         id: 4,
         title: 'Gallery',
         link: '/gallery',
+        /*
         submenu: [
             {
                 id: 41,
@@ -103,16 +113,18 @@ const menus = [
                 link: '/gallery-slide'
             },
         ]
+        */
     },
-    {
+    /*{
         id: 7,
         title: 'RSVP',
         link: '/RSVP',
     },
+    */
     {
         id: 8,
         title: 'Bridal Gift',
-        link: '/giftbox',
+        link: '/honneymoon',
     },
     {
         id: 9,
@@ -146,9 +158,10 @@ const menus = [
             },
             {
                 id: 55,
-                title: 'Coming Soon',
+                title: 'Set Up a reminder',
                 link: '/coming'
             },
+            /*
             {
                 id: 58,
                 title: '404 Error',
@@ -164,13 +177,14 @@ const menus = [
                 title: 'Register',
                 link: '/register'
             },
+            */
         ]
     },
-
     {
         id: 6,
-        title: 'Contact',
+        title: 'Contact Us',
         link: '/blog',
+        /*
         submenu: [
             {
                 id: 61,
@@ -203,6 +217,7 @@ const menus = [
                 link: '/blog-single-fullwidth/1'
             },
         ]
+        */
     }
 ]
 

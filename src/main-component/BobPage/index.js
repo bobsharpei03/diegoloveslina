@@ -8,7 +8,7 @@ import Bob from '../../components/Bob/Bob';
 const BobPage =() => {
     return(
         <Fragment>
-            <Navbar1/>
+            <Navbar2/>
             {/*<Navbar2/>*/}
             <Bob/>
             <Footer/>
