@@ -29,7 +29,7 @@ const HomePage =() => {
             <BackgroundVideo/>
             {/*<VideoSection/>*/}
             <StorySection/>
-            <CtaSection/>
+            {/*<CtaSection/>*/}
             <PortfolioSection/>
             <RSVP/>
             <GiftBox/>
