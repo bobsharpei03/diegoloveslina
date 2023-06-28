@@ -9,6 +9,13 @@ import 'swiper/css/pagination';
 import hero1 from '../../images/slider/slide-1.jpg'
 import hero2 from '../../images/slider/slide-2.jpg'
 import hero3 from '../../images/slider/slide-3.jpg'
+import hero4 from '../../images/slider/Top_wedding.jpg'
+import hero5 from '../../images/slider/berkeley.jpeg'
+import hero6 from '../../images/slider/Manor.webp'
+import hero7 from '../../images/slider/Beach1.jpeg'
+import hero8 from '../../images/slider/Pichu.jpg'
+import hero9 from '../../images/slider/Skiing.jpg'
+import hero10 from '../../images/slider/Thai.jpg'
 
 const Hero3 = (props) => {
     return (
@@ -31,25 +38,25 @@ const Hero3 = (props) => {
                 slidesPerView={1}
                 pagination={{ clickable: true }}
                 loop={true}
-                speed={1800}
+                speed={1000}
                 parallax={true}
                 navigation
             >
                 <SwiperSlide>
                     <div className="swiper-slide">
-                        <div className="slide-inner slide-bg-image" style={{ backgroundImage: `url(${hero1})` }}>
+                        <div className="slide-inner slide-bg-image" style={{ backgroundImage: `url(${hero10})` }}>
                         </div>
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
                     <div className="swiper-slide">
-                        <div className="slide-inner slide-bg-image" style={{ backgroundImage: `url(${hero2})` }}>
+                        <div className="slide-inner slide-bg-image" style={{ backgroundImage: `url(${hero8})` }}>
                         </div>
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
                     <div className="swiper-slide">
-                        <div className="slide-inner slide-bg-image" style={{ backgroundImage: `url(${hero3})` }}>
+                        <div className="slide-inner slide-bg-image" style={{ backgroundImage: `url(${hero7})` }}>
                         </div>
                     </div>
                 </SwiperSlide>

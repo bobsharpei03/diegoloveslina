@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 import MobileMenu2 from '../MobileMenu2/MobileMenu2';
 
 
@@ -31,7 +31,7 @@ const Header2 = (props) => {
                   <button className="menu-close"><i className="ti-close"></i></button>
                   <ul className="nav navbar-nav mb-2 mb-lg-0">
                     {/*<li className="menu-item-has-children">*/}
-                      <li><Link to="/home">Home</Link>
+                      <li><NavLink  to="/">Home</NavLink>
                       {/*<ul className="sub-menu">                       
                         <li><Link onClick={ClickHandler} to="/home">Home style 1</Link></li>
                         <li><Link onClick={ClickHandler} to="/home2">Home style 2</Link></li>
@@ -43,9 +43,10 @@ const Header2 = (props) => {
                         <li><Link onClick={ClickHandler} to="/invitation">Invitation</Link></li>
                         </ul>*/}
                     </li>
+                    {/*}
                     <li><Link onClick={ClickHandler} to="/about">About Us</Link></li>
                     <li><Link onClick={ClickHandler} to="/bob">Bob</Link></li>
-                    <li><Link onClick={ClickHandler} to="/honneymoon">Bridal Gift</Link></li>                
+                      <li><Link onClick={ClickHandler} to="/honneymoon">Bridal Gift</Link></li>*/}
                     {/*<li className="menu-item-has-children">
                       <Link onClick={ClickHandler} to="/wedding">Wedding</Link>
                       <ul className="sub-menu">
@@ -53,6 +54,7 @@ const Header2 = (props) => {
                         <li><Link onClick={ClickHandler} to="/wedding-details">Wedding Details</Link></li>
                       </ul>
                     </li>*/}
+                    {/*}
                     <li className="menu-item-has-children">
                       <Link onClick={ClickHandler} to="/gallery">Gallery</Link>                      
                       {/*<ul className="sub-menu">
@@ -60,9 +62,9 @@ const Header2 = (props) => {
                         <li><Link onClick={ClickHandler} to="/gallery-s2">Gallery Style 2</Link></li>
                         <li><Link onClick={ClickHandler} to="/gallery-slide">Gallery Slide</Link></li>
                       </ul>*/}
-                    </li>
+                    {/*</li>*/}
                     {/*<li><Link onClick={ClickHandler} to="/rsvp">RSVP</Link></li>*/}
-                    <li className="menu-item-has-children">
+                    {/*<li className="menu-item-has-children">
                       <Link onClick={ClickHandler} to="/story">pages</Link>
                       <ul className="sub-menu">
                         <li><Link onClick={ClickHandler} to="/story">Our story</Link></li>
@@ -74,7 +76,7 @@ const Header2 = (props) => {
                         {/*<li><Link onClick={ClickHandler} to="/404">404 Error</Link></li>
                         <li><Link onClick={ClickHandler} to="/login">Login</Link></li>
                     <li><Link onClick={ClickHandler} to="/register">Sign Up</Link></li>*/}
-                      </ul>
+                      {/*</ul>
                     </li>
                     <li className="menu-item-has-children">
                       <Link onClick={ClickHandler} to="/blog-single-left-sidebar/1">Contact Us</Link>
@@ -94,10 +96,10 @@ const Header2 = (props) => {
                               fullwidth</Link></li>
                           </ul>
                         </li>
-                      </ul>*/}
-                    </li>
+                      </ul>
+                  </li>*/}
                   </ul>
-                </div>
+                  </div>
               </div>
               <div className="col-lg-2 col-md-2 col-2">
                 <div className="header-right">

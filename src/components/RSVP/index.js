@@ -101,8 +101,8 @@ const RSVP = (props) => {
             Meal1: forms.Meal1,
             Meal2: forms.Meal2,*/
             Name: forms.Name,
-            Song1: forms.Song1,
-            Song2: forms.Song2,
+            Song1: "",
+            Song2: "",
             time: new Date(),
         })
         showToastMessage();
@@ -126,15 +126,15 @@ const RSVP = (props) => {
                         <SectionTitle MainTitle={'Are you attending?'} />
                       {/*  <p className=''>This is a couples or singles only event</p>*/}            
                         <form onSubmit={submitHandler} className="contact-validation-active" >
-                        <div className="radio-buttons">
+                        <div className="radio-buttons" onChange={e => changeHandler(e)}>
                                 <p>
                                     {/*<input type="radio" id="attend" name="radio-group" defaultChecked />*/}
-                                    <input value="Yes" type="radio" id="attend" name="Attend" onChange={(e) => {changeHandler(e)}} />
-                                    <label htmlFor="attend">Yes, I will be there</label>
+                                    <input value="Yes" type="radio" id="Yes" name="Attend" />
+                                    <label htmlFor="Yes">Yes, I will be there</label>
                                 </p>
                                 <p>
-                                    <input value="No" type="radio" id="not" name="Attend" onChange={(e)=>{changeHandler(e)}} />
-                                    <label htmlFor="not">Sorry, I can’t come</label>
+                                    <input value="No" type="radio" id="No" name="Attend"/>
+                                    <label htmlFor="No">Sorry, I can’t come</label>
                                 </p>
                             </div>
                             {/*<div className="form-field">                            
@@ -183,7 +183,7 @@ const RSVP = (props) => {
                                 onChange={(e) => changeHandler(e)}
                                 className="form-control"
                                 placeholder="I'll like to dance ....." />
-                                {validator.message('Song1', forms.Song1, 'required')}
+                                {/*{validator.message('Song1', forms.Song1, 'required')}*/}
                             </div>
                             <div className="form-field">
                                 <label>What other song would you like dancing?</label>
@@ -195,7 +195,7 @@ const RSVP = (props) => {
                                 onChange={(e) => changeHandler(e)}
                                 className="form-control"
                                 placeholder="I'll like to dance also....." />
-                                {validator.message('Song2', forms.Song2, 'required')}
+                                {/*{validator.message('Song2', forms.Song2, 'required')}*/}
                             </div>
                             {/*<div className="form-field">
                                 <label>First Guest Meal Choice</label>

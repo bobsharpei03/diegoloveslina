@@ -6,11 +6,12 @@ import { Link } from 'react-scroll'
 import { NavLink } from 'react-router-dom'
 import './style.css';
 
+/*
 const menus = [
     {
         id: 1,
         title: 'Home',
-        link: '/home3',
+        link: '/home3', //#scrool
         /*
         submenu: [
             
@@ -51,8 +52,8 @@ const menus = [
             }, 
         ]
         */
-    },
-    {
+    //},
+    /*{
         id: 6,
         title: 'Contact',
         link: '/blog-single-left-sidebar/1',
@@ -90,8 +91,8 @@ const menus = [
             },
         ]
         */
-    }
-]
+    //}
+//]
 
 
 const MobileMenu = () => {
@@ -100,7 +101,10 @@ const MobileMenu = () => {
     const [menuActive, setMenuState] = useState(false);
 
     const ClickHandler = () => {
-        window.scrollTo(10, 0);
+        window.scrollTo({
+            top:0,
+            left: 0,
+            behavior: "smooth"});
     }
 
     return (
@@ -111,6 +115,7 @@ const MobileMenu = () => {
                 </div>
 
                 <ul className="responsivemenu">
+                    {/*}
                     {menus.map((item, mn) => {
                         return (
                             <ListItem className={item.id === openId ? 'active' : null}  key={mn}>
@@ -139,16 +144,17 @@ const MobileMenu = () => {
                                 }
                             </ListItem>
                         )
-                    })}
+                    })}*/}
+                    <li><Link activeClass="active" to="hero3" spy={true} smooth={true} duration={500} >Home</Link></li>
                     <li><Link activeClass="active" to="couple" spy={true} smooth={true} duration={500} >Couple</Link></li>
-                    <li><Link activeClass="active" to="Bob" spy={true} smooth={true} duration={500} >Bob</Link></li>
+                    <li><Link activeClass="active" to="bob" spy={true} smooth={true} duration={500} >Bob</Link></li>
                     <li><Link activeClass="active" to="story" spy={true} smooth={true} duration={500} >Story</Link></li>
                     <li><Link activeClass="active" to="gallery" spy={true} smooth={true} duration={500} >Gallery</Link></li>
                     <li><Link activeClass="active" to="RSVP" spy={true} smooth={true} duration={500} >RSVP</Link></li>
                     <li><Link activeClass="active" to="giftbox" spy={true} smooth={true} duration={500}>Bridal Gift</Link></li>
                     {/*<li><Link activeClass="active" to="bridgegroom" spy={true} smooth={true} duration={500} >Family Members</Link></li>*/}
                     <li><Link activeClass="active" to="event" spy={true} smooth={true} duration={500} >Details</Link></li>
-                    <li><NavLink onClick={ClickHandler} to="/blog-single-left-sidebar/1">Contact</NavLink></li>
+                    {/*<li><NavLink onClick={ClickHandler} to="/blog-single-left-sidebar/1">Contact</NavLink></li>*/}
                 </ul>
             </div>
 

@@ -1,6 +1,7 @@
 import React, {Fragment} from 'react';
 import PageTitle from '../../components/pagetitle'
 import Navbar2 from '../../components/Navbar2';
+import Navbar1 from '../../components/Navbar';
 import Footer from '../../components/footer/Footer';
 import Scrollbar from '../../components/scrollbar'
 import RSVP from '../../components/RSVP';

@@ -8,6 +8,7 @@
         "helpers/_mixins.scss",
         "base/_base.scss",
         "components/_section-title.scss",
+        "components/_giftbox-title.scss",
         "components/_buttons.scss",
         "components/_form.scss",
         "components/_social-links.scss",

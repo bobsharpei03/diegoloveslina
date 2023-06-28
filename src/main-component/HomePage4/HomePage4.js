@@ -28,7 +28,7 @@ const HomePage4 = () => {
             <CtaSection />
             <PortfolioSection />
             <RSVP />
-            <BrideGrooms />
+           {/*<BrideGrooms/>*/}
             <EventSection />
             <PartnerSection />
             <BlogSection />

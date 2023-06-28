@@ -11,8 +11,6 @@ import shape4 from '../../images/couple/shape-4.png'
 
 
 const Bob = (props) => {
-    
-   
     return (
         <section className={`couple-section section-padding ${props.cClass}`} id="bob">
             <div className="container">
@@ -32,7 +30,7 @@ const Bob = (props) => {
                                     <div className="col-lg-7">
                                         <div className="couple-text">
                                             <h3>Bob Sharpei</h3>
-                                            <p>Our story would not be the same without a little wrinkly fellow that showed in our lives. Bob was adopted by Lina in her native Paramonga. Four years later Bob made the trip to Boston, where we became a family of three. Bob lived a happy life until age fifteen. Although he will not be with us for this special day, his precense will be forever in our hearts.
+                                            <p>Their story would not be the same without a little wrinkly fellow that showed in their lives. Bob was adopted by Lina in her native Paramonga. A few years later Bob made the trip to Boston, where they became a family of three. Bob lived a happy life until age fifteen. Although he will not be with them for this special day, his presence will be forever in their hearts.
                                         </p>
                                             <div className="social">
                                                 <ul>

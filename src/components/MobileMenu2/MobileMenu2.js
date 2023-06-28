@@ -57,21 +57,17 @@ const menus = [
         ]
         */
     },
-
     {
         id: 2,
         title: 'The Couple',
         link: '/about',
-        /*
-        submenu: [
-            {
-                id: 21,
-                title: 'Invitation',
-                link: '/invitation'
-            },
-        ]*/
     },
-/*
+    {
+        id: 3,
+        title: 'Bob',
+        link: '/Bob',
+    },
+    /*
     {
         id: 3,
         title: 'The Wedding',
@@ -122,20 +118,17 @@ const menus = [
     },
     */
     {
-        id: 8,
+        id: 5,
         title: 'Bridal Gift',
         link: '/honneymoon',
     },
-    {
-        id: 9,
-        title: 'Bob',
-        link: '/Bob',
-    },
-    {
+
+    /*{
         id: 5,
         title: 'Pages',
         link: '/',
         submenu: [
+        
             {
                 id: 51,
                 title: 'Our story',
@@ -161,7 +154,6 @@ const menus = [
                 title: 'Set Up a reminder',
                 link: '/coming'
             },
-            /*
             {
                 id: 58,
                 title: '404 Error',
@@ -177,10 +169,10 @@ const menus = [
                 title: 'Register',
                 link: '/register'
             },
-            */
+            
         ]
-    },
-    {
+    },*/
+    /*{
         id: 6,
         title: 'Contact Us',
         link: '/blog',
@@ -218,7 +210,7 @@ const menus = [
             },
         ]
         */
-    }
+    //}
 ]
 
 

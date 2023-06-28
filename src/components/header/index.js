@@ -47,7 +47,7 @@ const Header = (props) => {
                     <li><Link activeClass="active" to="bob" spy={true} smooth={true} duration={500} >Bob</Link></li>
                     <li><Link activeClass="active" to="story" spy={true} smooth={true} duration={500} >Story</Link></li>
                     <li><Link activeClass="active" to="gallery" spy={true} smooth={true} duration={500} >Gallery</Link></li>
-                    <li><Link activeClass="active" to="giftbox" spy={true} smooth={true} duration={500}>Bridal Gift</Link></li>
+                    <li><Link activeClass="active" to="giftbox" spy={true} smooth={true} duration={500}>Bridal Gifts</Link></li>
                     {/*<li><Link activeClass="active" to="RSVP" spy={true} smooth={true} duration={500} >RSVP</Link></li>*/}
                     {/*<li><Link activeClass="active" to="bridegroom" spy={true} smooth={true} duration={500} >Family Members</Link></li>*/}
                     <li className="menu-item-has-children">
@@ -56,7 +56,7 @@ const Header = (props) => {
                         <li><NavLink onClick={ClickHandler} to="/invitation">Invitation</NavLink></li>
                       </ul>
                     </li>
-                    <li><NavLink onClick={ClickHandler} to="/blog-single-left-sidebar/1">Contact Us</NavLink></li>
+                    {/*<li><NavLink onClick={ClickHandler} to="/blog-single-left-sidebar/1">Contact Us</NavLink></li>*/}
                     {/*<li className="menu-item-has-children">
                       <NavLink onClick={ClickHandler} to="/blog">Blog</NavLink>
                       {/*<NavLink onClick={ClickHandler} to="/blog-single-left-sidebar/1">Blog</NavLink>                      
@@ -80,7 +80,6 @@ const Header = (props) => {
                       </ul>
                             </li>*/}
                   </ul>
-
                 </div>
               </div>
               <div className="col-lg-2 col-md-2 col-2">

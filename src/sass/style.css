@@ -350,7 +350,8 @@ img {
 .mfp-with-zoom .mfp-container,
 .mfp-with-zoom.mfp-bg {
   opacity: 0;
-  -webkit-backface-visibility: hidden;
+  /*-webkit-backface-visibility: hidden;*/
+  backface-visibility: hidden;
   -webkit-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
 }
@@ -498,7 +499,8 @@ img {
   padding: 15px 45px;
   border: 0;
   text-transform: capitalize;
-  -webkit-backface-visibility: hidden;
+  /*-webkit-backface-visibility: hidden;*/
+  backface-visibility: hidden;
   z-index: 1;
   position: relative;
   font-size: 16px;
@@ -561,7 +563,8 @@ img {
   padding: 15px 45px;
   border: 0;
   text-transform: capitalize;
-  -webkit-backface-visibility: hidden;
+  /*-webkit-backface-visibility: hidden;*/
+  backface-visibility: hidden;
   z-index: 1;
   position: relative;
   font-size: 16px;
@@ -893,7 +896,8 @@ img {
   overflow: hidden;
   -webkit-transform-origin: 60px 60px;
   transform-origin: 60px 60px;
-  -webkit-mask-image: -webkit-linear-gradient(top, #000000, rgba(0, 0, 0, 0));
+  /*-webkit-mask-image: -webkit-linear-gradient(to bottom, #000000, rgba(0, 0, 0, 0));*/
+  mask-image: -webkit-linear-gradient(to bottom, #000000, rgba(0, 0, 0, 0));
   -webkit-animation: rotate 1.2s infinite linear;
   animation: rotate 1.2s infinite linear;
 }
@@ -2004,12 +2008,14 @@ img {
   }
   .wpo-site-header .x-close .first-angle {
     position: absolute;
-    -webkit-transform: rotate(-44deg);
+    /*-webkit-transform: rotate(-44deg);*/
+    transform: rotate(-44deg);
     top: 16px;
     left: 10px;
   }
   .wpo-site-header .x-close .last-angle {
-    -webkit-transform: rotate(44deg);
+    /*-webkit-transform: rotate(44deg);*/
+    transform: rotate(44deg);
     position: absolute;
     top: 16px;
     right: 10px;
@@ -2890,12 +2896,14 @@ img {
   }
   .wpo-site-header .x-close .first-angle {
     position: absolute;
-    -webkit-transform: rotate(-44deg);
+    /*-webkit-transform: rotate(-44deg);*/
+    transform: rotate(-44deg);
     top: 16px;
     left: 10px;
   }
   .wpo-site-header .x-close .last-angle {
-    -webkit-transform: rotate(44deg);
+    /*-webkit-transform: rotate(44deg);*/
+    transform: rotate(44deg);
     position: absolute;
     top: 16px;
     right: 10px;
@@ -3496,7 +3504,7 @@ img {
 .static-hero-s2 .gradient-overlay,
 .wpo-hero-style-3 .gradient-overlay {
   background: -webkit-gradient(linear, left top, right top, color-stop(45%, #06002E), color-stop(65%, transparent));
-  background: linear-gradient(left, #06002E 45%, transparent 65%);
+  background: linear-gradient(to right, #06002E 45%, transparent 65%);
   width: 100%;
   height: 100%;
   position: absolute;
@@ -8193,7 +8201,7 @@ img {
   content: "";
   background-color: #705cf2;
   background: -webkit-gradient(linear, left top, right top, from(#DFCACC), to(#705cf2));
-  background: linear-gradient(left, #DFCACC, #705cf2);
+  background: linear-gradient(to right, #DFCACC, #705cf2);
   width: 100%;
   height: 100%;
   position: absolute;

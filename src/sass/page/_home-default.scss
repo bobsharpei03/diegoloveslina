@@ -1292,7 +1292,7 @@
 		width: 100%;
 		height: 430px;
 		content: "";
-		background: url(../../images/event/bg.jpg) no-repeat center center;
+		background: url(../../images/event/church.png) no-repeat center center;
 		z-index: -1;
 	}
 
@@ -1303,7 +1303,7 @@
 		width: 100%;
 		height: 430px;
 		content: "";
-		background: transparentize(#C59097, .2);
+		/*background: transparentize(#C59097, .2);*/
 		z-index: -1;
 	}
 
@@ -1313,7 +1313,7 @@
 			position: relative;
 			margin-bottom: 40px;
 			box-shadow: 0px 0px 6.1px 3.9px rgba(28, 31, 86, 0.06);
-			background: $white;
+			background: rgb(246, 237, 255);
 			padding: 30px;
 			padding-top: 0;
 

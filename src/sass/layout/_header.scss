@@ -1038,7 +1038,7 @@
 		>ul li a:hover,
 		>ul li a:focus {
 			text-decoration: none;
-			color: darken($theme-primary-color, 5%);
+			color: darken($theme-primary-color, 5%);//ttttttttttt
 		}
 
 		// style for widther screen
@@ -1051,7 +1051,7 @@
 				font-size: 16px;
 				padding: 35px 20px;
 				display: block;
-				color: $dark-gray;
+				color: $dark-gray;//ttttttttttt
 				font-weight: 500;
 				position: relative;
 				font-family: $base-font;
@@ -1082,7 +1082,7 @@
 				font-size: calc-rem-value(16);
 				display: inline-block;
 				padding: 5px 0px;
-				color: $dark-gray;
+				color: $dark-gray;//tttttttttt
 				position: relative;
 				overflow: hidden;
 				font-weight: 500;

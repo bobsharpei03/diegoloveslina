@@ -5,7 +5,7 @@ import myvideo from '../media/Weddingfirstvidhtml6.mp4';
 const BackgroundVideo = () => {
     //const videoSource = "../images/Weddingfirstvidhtml6.mp4"
     return (
-        <div className={classes.Container} >
+        <div>
             <video autoPlay="autoplay" loop="loop" muted className={classes.Video} >
                 <source src={myvideo} type="video/mp4" />
                 Your browser does not support the video tag.

@@ -26,16 +26,16 @@ const HomePage =() => {
             {/*<Hero/>*/}
             <Hero3/>
             <CoupleSection/>
-            <BackgroundVideo/>
+            <Bob/>
+            {/*<BackgroundVideo/>*/}
             {/*<VideoSection/>*/}
             <StorySection/>
             {/*<CtaSection/>*/}
             <PortfolioSection/>
             <RSVP/>
             <GiftBox/>
-            <BrideGrooms/>
-            <EventSection/>
-            <Bob/>
+            {/*<BrideGrooms/>*/}
+            <EventSection/>          
             {/*<PartnerSection/>*/}
             {/*<BlogSection/>*/}
             <Footer/>

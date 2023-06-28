@@ -2,6 +2,7 @@
 	Fonts
 ----------------------------*/
 @import url('https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://www.fontspace.com/bordemile-font-f57510');
 
 @font-face {
     font-family: 'Donalia';
@@ -11,11 +12,16 @@
          url('../../fonts/Donalia.woff') format('woff'),
          url('../../fonts/Donalia.ttf')  format('truetype'),
 }
+@font-face {
+    font-family: 'BordemileDemoRegular';
+    src: url('../../fonts/BordemileDemoRegular.ttf')  format('truetype'),
+}
 
 // fonts
 $base-font-size: 15;
 $base-font: 'Jost', sans-serif;
 $heading-font: 'Donalia';
+$envelop-font: 'BordemileDemoRegular';
 
 
 // color

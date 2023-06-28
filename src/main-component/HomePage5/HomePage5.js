@@ -31,7 +31,7 @@ const HomePage5 = () => {
                     <CtaSection />
                     <PortfolioSection />
                     <RSVP />
-                    <BrideGrooms />
+                  {/*<BrideGrooms/>*/}
                     <EventSection />
                     <PartnerSection />
                     <BlogSection />

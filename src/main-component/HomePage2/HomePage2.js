@@ -26,10 +26,10 @@ const HomePage2 =() => {
             <StorySection2/>
             <PortfolioSection2 gClass={'pt-0'}/>
             <RSVP2/>
-            <BrideGrooms/>
+            {/*<BrideGrooms/>*/}
             <EventSection/>
             <PartnerSection/>
-            <BlogSection/>
+                 {/*<BlogSection/>*/}
             <Footer/>
             <Scrollbar/>
         </Fragment>
