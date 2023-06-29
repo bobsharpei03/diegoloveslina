@@ -16,7 +16,7 @@ const GiftBox = (props) => {
                                     <div className="wpo-event-text">
                                         <SectionTitleS3 MainTitle={'Honeymoon Registry / Registro de Luna de Miel'} />
                                         <br/>                                                                             
-                                        <h3>As we are blessed to have all the physical items we need, we have created a honeymoon registry for our trip to Israel! We can't wait to visit exciting places such as Bethlehem, Nazareth, Jerusalem, Sea of Galilee and many more. You can find our honeymoon registry at:</h3>
+                                        <h3>As we are blessed to have all the physical items we need, we have created a honeymoon fund/registry for our trip to Israel! We can't wait to visit the city of Jerusalem and all their holy places. So, should you wish for your gift to go towards any of our ideas or places, please write which one on a card and pop it in our designated box at the venue, then we'll make sure to send an appropiate selfie of us enjoying the experience thanks to you! You can find our honeymoon registry at:</h3>
                                         <br/>
                                         <ul>
                                         <li><a  href='https://www.hitchd.com/diegoloveslina'>Hitchd Registry</a></li>

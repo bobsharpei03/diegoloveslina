@@ -43,7 +43,7 @@ const StorySection = (props) => {
                                                     <div className="inner-ball"></div>
                                                 </div>
                                             </div>
-                                            <p>Lina needed to send some money to Peru. Diego was working on a money transfering store. Diego remembers an aloof Lina, wearing designer dark shades and a headband. Next time when they met at Diego's cousin pocker party, they talked all night. </p>
+                                            <p>Lina needed to send some money to Peru. Diego was working at a money transfer store. Diego remembers an aloof Lina, wearing dark sunglasses and a headband. The next time, they met at a poker party, at Julia's house, where both were invited and where, they would begin their story... </p>
                                         </div>
                                     </div>
                                 </div>
@@ -59,7 +59,7 @@ const StorySection = (props) => {
                                                     <div className="inner-ball"></div>
                                                 </div>
                                             </div>
-                                            <p>Even though they became friends from the begining, Diego cannot forget that time he invited Lina for sweet pastries at Au Bon Pain near Copley Square. They sat accross the Boston Library talking about their dreams and hopes never knowing they dreams and hopes will be with each other.</p>
+                                            <p>Even though they became friends from the beginning, Diego cannot forget that time he invited Lina for sweet pastries at Au Bon Pain near Copley Square. They sat accross the Boston Library talking about their dreams and hopes, not knowing that their dreams and hopes would be together.</p>
                                         </div>
                                     </div>
                                     <div className="col col-lg-6 col-12 order-lg-2 order-1">
@@ -91,7 +91,7 @@ const StorySection = (props) => {
                                                     <div className="inner-ball"></div>
                                                 </div>
                                             </div>
-                                            <p>Diego proposed to Lina on Christmas eve night 2021, Right before he made the announcement,"La Panzonita" almost chocked to death with a zip of wine, everyone was so scared that even Javier (Lina's brother) forgot to turn on his camera, as Diego had secretly asked just minutes before. Giancarlo partially saved the night by recording when Diego knelt before Lina asking her to be his wife.</p>
+                                            <p>Diego proposed to Lina on Christmas Eve night 2021, Right before he made the announcement,"La Panzonita" almost chocked to death with a sip of wine, everyone was so scared that Javier (Lina's brother) even forgot to turn on his camera, as Diego had secretly asked him just minutes before. Giancarlo partially saved the night by recording when Diego knelt before Lina asking her to be his wife.</p>
                                         </div>
                                     </div>
                                 </div>

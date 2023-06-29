@@ -4,8 +4,10 @@ import Navbar2 from '../../components/Navbar2';
 import PageTitle from '../../components/pagetitle'
 import CoupleSection from '../../components/CoupleSection/CoupleSection';
 import WeddingTime from '../../components/weddingTime/WeddingTime';
-import StorySection2 from '../../components/StorySection2/StorySection2';
-import PortfolioSection2 from '../../components/PortfolioSection2/PortfolioSection2';
+//import StorySection2 from '../../components/StorySection2/StorySection2';
+import StorySection1 from '../../components/StorySection/StorySection';
+//import PortfolioSection2 from '../../components/PortfolioSection2/PortfolioSection2';
+//import PortfolioSection1 from '../../components/PortfolioSection/PortfolioSection';
 import PartnerSection from '../../components/PartnerSection/PartnerSection';
 import Scrollbar from '../../components/scrollbar'
 
@@ -16,8 +18,8 @@ const AboutPage =() => {
             <PageTitle pageTitle={'The Couple'} pagesub={'About'}/> 
             <CoupleSection cClass={'couple-section-s2'}/>
             <WeddingTime/>
-            <StorySection2/>
-            <PortfolioSection2 gClass={'pt-0'}/>
+            <StorySection1/>
+            {/*<PortfolioSection1 gClass={'pt-0'}/>*/}
             <PartnerSection pClass={'section-padding pt-0'}/>
             <Footer/>
             <Scrollbar/>
