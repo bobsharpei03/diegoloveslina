@@ -53,7 +53,7 @@ const Header = (props) => {
                     <li className="menu-item-has-children">
                       <Link activeClass="active" to="event" spy={true} smooth={true} duration={500} >Details</Link>
                       <ul className="sub-menu">
-                        <li><NavLink onClick={ClickHandler} to="/invitation">Invitation</NavLink></li>
+                        <li><NavLink onClick={ClickHandler} to="/InvitationPage">Invitation</NavLink></li>
                       </ul>
                     </li>
                     {/*<li><NavLink onClick={ClickHandler} to="/blog-single-left-sidebar/1">Contact Us</NavLink></li>*/}

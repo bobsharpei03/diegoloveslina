@@ -24,11 +24,22 @@ const Footer = (props) =>{
                                 <Link onClick={ClickHandler} className="logo" to="/"><small>Diego</small>loves<small>Lina.com</small>
                                 <span><i className="fi flaticon-dove"></i></span></Link>
                             </div>
-                            <p>This website has been possible by family and friends contribution. Specials Thanks to:</p>
+                            <p>This website has been possible by contribution of family and friends.</p>
+                            <p>Specials Thanks to:</p>
                             <p>Director: Diego Maquill</p>
                             <p>Image editor: Lina Flores</p>
                             <p>Script editor: Kelly Gil Franco </p>
                             <p>Quality Control: Gabriela Acosta </p>
+                        </div>
+                    </div>
+                    <div className="col col-xl-4  col-lg-4 col-md-6 col-sm-12 col-12">
+                        <div className="widget about-widget">
+                            <div className="widget-title">
+                                <br/>
+                                <br/>
+                                <h3>Send your suggestions</h3>
+                            </div>
+                            <p>This website is an ongoing effort, if you find any misspells or incorrect information, you may reach us to any of the emails listed in this sections. We love for you to help us! </p>
                             <ul>
                                 <li>
                                     <Link onClick={ClickHandler} to="/">
@@ -51,19 +62,12 @@ const Footer = (props) =>{
                                     </Link>
                                 </li>
                             </ul>
-                        </div>
-                    </div>
-                    <div className="col col-xl-4  col-lg-4 col-md-6 col-sm-12 col-12">
-                        <div className="widget link-widget">
-                            <div className="widget-title">
-                                <h3>Information</h3>
-                            </div>
-                            <ul>
+                            {/*<ul>
                                 <li><Link onClick={ClickHandler} to="/about">About Us</Link></li>
-                                {/*<li><Link onClick={ClickHandler} to="/blog">Latest News</Link></li>*/}
+                                <li><Link onClick={ClickHandler} to="/blog">Latest News</Link></li>
                                 <li><Link onClick={ClickHandler} to="/accomodation">Accomodation</Link></li>
                                 <li><Link onClick={ClickHandler} to="/story">Our story</Link></li>
-                            </ul>
+  </ul>*/}
                         </div>
                     </div>
                     <div className="col col-xl-4  col-lg-4 col-md-6 col-sm-12 col-12">

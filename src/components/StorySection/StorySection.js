@@ -3,8 +3,8 @@ import SectionTitle from '../SectionTitle'
 import sImg1 from '../../images/story/1.jpg'
 import sImg2 from '../../images/story/2.jpg'
 import sImg3 from '../../images/story/3.jpg'
-import sImg4 from '../../images/story/knelt.png'
-import sImg5 from '../../images/story/knelt2.png'
+import sImg4 from '../../images/story/firstmet.jpeg'
+import sImg5 from '../../images/story/firstdate.jpeg'
 import sImg6 from '../../images/story/knelt3.jpeg'
 
 import shape1 from '../../images/rsvp/shape1.png'
@@ -31,19 +31,19 @@ const StorySection = (props) => {
                                 <div className="row align-items-center">
                                     <div className="col col-lg-6 col-12">
                                         <div className="img-holder right-align-text fadeInLeftSlow" data-wow-duration="1500ms">
-                                            <img src={sImg1} className="img img-responsive" alt="stroy"/>
+                                            <img src={sImg4} className="img img-responsive" alt="stroy"/>
                                         </div>
                                     </div>
                                     <div className="col col-lg-6 col-12">
                                         <div className="story-text left-align-text fadeInRightSlow" data-wow-duration="2000ms">
                                             <h3>First Time We Meet</h3>
-                                            <span className="date">Nov 23th, 2003</span>
+                                            {/*<span className="date">Nov 23th, 2003</span>*/}
                                             <div className="line-shape">
                                                 <div className="outer-ball">
                                                     <div className="inner-ball"></div>
                                                 </div>
                                             </div>
-                                            <p>Lina needed to send some money to Peru. Diego was working on a money transfering store. Diego remembers an aloof Lina, wearing designer dark shades and asking to make a money transfer to Peru, the rest is history </p>
+                                            <p>Lina needed to send some money to Peru. Diego was working on a money transfering store. Diego remembers an aloof Lina, wearing designer dark shades and a headband. Next time when they met at Diego's cousin pocker party, they talked all night. </p>
                                         </div>
                                     </div>
                                 </div>
@@ -53,7 +53,7 @@ const StorySection = (props) => {
                                     <div className="col col-lg-6 col-12 order-lg-1 order-2 text-holder left-text">
                                         <div className="story-text right-align-text fadeInLeftSlow" data-wow-duration="2000ms">
                                             <h3>Our First Date</h3>
-                                            <span className="date">May 22nd 2004</span>
+                                            {/*<span className="date">May 22nd 2004</span>*/}
                                             <div className="line-shape s2">
                                                 <div className="outer-ball">
                                                     <div className="inner-ball"></div>
@@ -64,7 +64,7 @@ const StorySection = (props) => {
                                     </div>
                                     <div className="col col-lg-6 col-12 order-lg-2 order-1">
                                         <div className="img-holder left-align-text">
-                                            <img src={sImg2} alt="stroy" className="img img-responsive fadeInRightSlow" data-wow-duration="1500ms"/>
+                                            <img src={sImg5} alt="stroy" className="img img-responsive fadeInRightSlow" data-wow-duration="1500ms"/>
                                                 <span className="heart">
                                                     <i className="fi flaticon-dance"></i>
                                                 </span>

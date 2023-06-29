@@ -153,7 +153,12 @@ const MobileMenu = () => {
                     <li><Link activeClass="active" to="RSVP" spy={true} smooth={true} duration={500} >RSVP</Link></li>
                     <li><Link activeClass="active" to="giftbox" spy={true} smooth={true} duration={500}>Bridal Gift</Link></li>
                     {/*<li><Link activeClass="active" to="bridgegroom" spy={true} smooth={true} duration={500} >Family Members</Link></li>*/}
-                    <li><Link activeClass="active" to="event" spy={true} smooth={true} duration={500} >Details</Link></li>
+                    <li className='menu-item-has-children'>
+                        <Link activeClass="active" to="event" spy={true} smooth={true} duration={500} >Details</Link>
+                    <ul className="sub-menu">
+                        <li><NavLink onClick={ClickHandler} to="/InvitationPage">Invitation</NavLink></li>
+                    </ul>
+                    </li>
                     {/*<li><NavLink onClick={ClickHandler} to="/blog-single-left-sidebar/1">Contact</NavLink></li>*/}
                 </ul>
             </div>
