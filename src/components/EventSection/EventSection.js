@@ -12,12 +12,12 @@ const Accomodations = [
         li5:'Discount Code: FMWEDD',
         li6:'You also highly recommend using pages such as airbnb.com to find affordable lodgging.',
         title2: 'Hospedaje',
-        li7: 'Westbury, NY esta aproximadamente a 45 minutos de la Ciudad de New York. Si bien es cierto Manhattan tiene mas que ofrecer, tengan en cuenta los tiempos por trafico vehicular. Para facilitar las distancias de viaje, tenemos un codigo de descuento en un hotel 3 estrellas, cercano a la iglesia y local de recepcion.',
+        li7: 'Westbury, NY está aproximadamente a 45 minutos de la Ciudad de New York. Si bien es cierto Manhattan tiene mas que ofrecer, tengan en cuenta los tiempos por tráfico vehicular. Para facilitar las distancias de viaje, tenemos un código de descuento en un hotel, cercano a la iglesia y local de recepción.',
         li8:'Hotel: Hilton Garden Inn',
-        li9:'Direccion: 1575 Privado Rd, Westbury, NY 11590',
-        li10:'Telefono: 516-683-8200',
-        li11:'Codigo de Descuento: FMWEDD',
-        li12: 'Es muy recomendable buscar hospedaje en paginas web como airbnb.com',
+        li9:'Dirección: 1575 Privado Rd, Westbury, NY 11590',
+        li10:'Teléfono: 516-683-8200',
+        li11:'Código de Descuento: FMWEDD',
+        li12: 'Es muy recomendable buscar hospedaje en páginas web como airbnb.com',
     },
 ]
 const Information = [
@@ -26,7 +26,7 @@ const Information = [
         li1:'To give all our guests the opportunity to enjoy themselves and celebrate without having to worry about little eyes and ears, we politely request no children. We thank you for your understanding.',
         li2:'Attire: Long dress, Suits and ties.',
         title2: 'Nuestros pequeños seran extrañados',
-        li3: 'Para darles la oportunidad a todos nuestros invitados de disfrutar y celebrar esta noche sin preocupacion de nuestro pequeños ojos y oidos, educadamente les pedimos no traer niños. Agradecemos por su comprension.',
+        li3: 'Para darles la oportunidad a todos nuestros invitados de disfrutar y celebrar esta noche sin preocupación de nuestro pequeños ojos y oídos, les pedimos gentilmente no traer niños. Agradecemos su comprensión.',
         li4: 'Vestimenta: Vestido largo, Traje y corbata',
     },
 ]
@@ -38,9 +38,9 @@ const Events = [
         li3:'85 Post Ave. Westbury, NY 11590, USA',
         li4:'+1 516-334-0021',
         li5:'Time: The religious ceremony will start promptly at 4:15pm.',
-        li6:'Hora: La ceremonia relegiosa comenzara a las 4:15pm hora exacta.',
+        li6:'Hora: La ceremonia relegiosa comenzará a las 4:15pm hora exacta.',
         li7:'Parking: There is a parking lot across the Parish. Post Rd is a extremely busy street on Sundays. Make plans to arrive at least 15 minutes earlier.',
-        li8:'Estacionamiento: Hay un estacionamiento al frente de la Parroquia. La calle "Post Ave" es muy congestionada los Domingos. Haga planes para llegar almenos 15 minutos antes.'
+        li8:'Estacionamiento: Hay un estacionamiento al frente de la Parroquia. La calle "Post Ave" es muy congestionada los Domingos. Haga planes para llegar 15 minutos antes.'
     },
     {
         title:'Cocktail Reception & Dinner',
@@ -49,11 +49,11 @@ const Events = [
         li3:'680 Old Country Rd. Westbury, NY 11590, USA',
         li4:'+1 516-334-4552',
         li5:'Parking: We will be offering free valet parking to all guests. However Uber or Taxi is highly encourage.',
-        li6:'Estacionamiento: Todos nuestro invitados podran usar el servicio de \'valet parking\' sin costo extra',
+        li6:'Estacionamiento: Todos nuestro invitados podrán usar el servicio de \'valet parking\' sin costo extra',
         li7:'Drinks: Full open bar will be available throughout the evening.',
-        li8:'Bebidas: Ofreceremos servicio completo de liquores, vinos, cerveza y sodas ',      
+        li8:'Bebidas: Ofreceremos servicio completo de licores, vinos, cerveza y sodas ',      
         li9:'Meal: Waitstaff will be taken your order at your table.',
-        li10:'Comida: Los meseros tomaran la order en su mesa.',
+        li10:'Comida: Los meseros tomarán la order en su mesa.',
     },
 ]
 

@@ -39,7 +39,7 @@ const Footer = (props) =>{
                                 <br/>
                                 <h3>Send your suggestions</h3>
                             </div>
-                            <p>This website is an ongoing effort, if you find any misspells or incorrect information, you may reach us to any of the emails listed in this sections. We love for you to help us! </p>
+                            <p>This website is an ongoing effort, if you find any misspells or incorrect information, you may reach us to any of the emails listed in this section. We love for you to help us! </p>
                             <ul>
                                 <li>
                                     <Link onClick={ClickHandler} to="/">

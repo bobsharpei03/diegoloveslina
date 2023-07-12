@@ -18,6 +18,8 @@ const GiftBox = (props) => {
                                         <br/>                                                                             
                                         <h3>As we are blessed to have all the physical items we need, we have created a honeymoon fund/registry for our trip to Israel! We can't wait to visit the city of Jerusalem and all their holy places. So, should you wish for your gift to go towards any of our ideas or places, please write which one on a card and pop it in our designated box at the venue, then we'll make sure to send an appropiate selfie of us enjoying the experience thanks to you! You can find our honeymoon registry at:</h3>
                                         <br/>
+                                        <h3>Tenemos la suerte de tener todos los artículos físicos que necesitamos, hemos creado un registro de luna de miel para nuestro viaje a Israel! Estamos ansiosos de visitar la ciudad de Jerusalén y todos sus lugares sagrados. Por lo tanto, si desea que su obsequio se destine a cualquiera de nuestras ideas o lugares, escriba cuál en una tarjeta y colóquela en nuestra caja designada en la boda, luego nos aseguraremos de enviar una selfie apropiada de nosotros disfrutando la experiencia gracias a ti!</h3>
+                                        <br/>
                                         <ul>
                                         <li><a  href='https://www.hitchd.com/diegoloveslina'>Hitchd Registry</a></li>
                                             <li>Password: DiegolovesLina03</li>

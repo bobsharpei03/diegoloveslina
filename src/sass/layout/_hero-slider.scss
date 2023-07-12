@@ -1141,7 +1141,7 @@
 --------------------------------------------*/
 .static-hero-s3,
 .static-hero-s4 {
-	height: 843px;
+	//height: 843px;
 	background: url(../../images/slider/bg.jpg) no-repeat center center;
 	background-size: cover;
 	display: flex;
@@ -1154,15 +1154,15 @@
 
 
 	@include media-query(991px) {
-		height: 700px;
+		height: 1280px;
 	}
 
 	@include media-query(550px) {
-		height: 550px;
+		height: 1800x;
 	}
 
 	@include media-query(450px) {
-		height: 1141px;
+		height: 1800px;
 	}
 
 	.hero-inner {

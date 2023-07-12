@@ -30,8 +30,9 @@ const Bob = (props) => {
                                     <div className="col-lg-7">
                                         <div className="couple-text">
                                             <h3>Bob Sharpei</h3>
-                                            <p>Their story would not be the same without a little wrinkly fellow that showed in their lives. Bob was adopted by Lina in her native Paramonga. A few years later Bob made the trip to Boston, where they became a family of three. Bob lived a happy life until age fifteen. Although he will not be with them for this special day, his presence will be forever in their hearts.
-                                        </p>
+                                            <p>Their story would not be the same without a little wrinkly fellow that showed in their lives. Bob was adopted by Lina in her native Paramonga. A few years later Bob made the trip to Boston, where they became a family of three. Bob lived a happy life until age fifteen. Although he will not be with them for this special day, his presence will be forever in their hearts.</p>
+                                            <br/>
+                                            <p>Su historia no sería la misma sin un peludo arrugadito que apareció en sus vidas. Bob fue adoptado por Lina en su provincia natal. Unos años después, Bob hizo el viaje a Boston, donde se convirtieron en una familia de tres. Bob vivió una vida feliz hasta los quince años. Aunque no estará con ellos en este día tan especial, su presencia estará por siempre en sus corazones.</p>
                                             <div className="social">
                                                 <ul>
                                                     <li><Link to="/"><i className="ti-facebook"></i></Link></li>
