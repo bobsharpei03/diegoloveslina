@@ -1,6 +1,6 @@
 import React from 'react'
 import TimeCountDown from '../countdown';
-import { Navigation, Pagination, A11y } from 'swiper';
+import { Autoplay, Navigation, Pagination, A11y } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -16,6 +16,8 @@ import hero7 from '../../images/slider/Beach1.jpeg'
 import hero8 from '../../images/slider/Pichu.jpg'
 import hero9 from '../../images/slider/Skiing.jpg'
 import hero10 from '../../images/slider/Thai.jpg'
+import hero11 from '../../images/slider/estate1.jpeg'
+import hero12 from '../../images/slider/estate2.jpeg'
 
 const Hero3 = (props) => {
     return (
@@ -24,6 +26,8 @@ const Hero3 = (props) => {
                 <div className="couple-text">
                     <h2>Lina & Diego</h2>
                     <p>We Are Getting Married Sep 3, 2023</p>
+                    <p>Last Day to RSVP is August 5th</p>
+                    <p>Please confirm your attendance so we can assign you a table</p>
                     <div className="wpo-wedding-date">
                         <div className="clock-grids">
                             <TimeCountDown/>
@@ -33,15 +37,31 @@ const Hero3 = (props) => {
             </div>
             <Swiper
                 // install Swiper modules
-                modules={[Navigation, Pagination, A11y]}
+                modules={[Autoplay, Navigation, Pagination, A11y]}
+                autoplay={{
+                    delay: 3500,
+                    disableOnInteraction: false,
+                }}
                 spaceBetween={0}
                 slidesPerView={1}
                 pagination={{ clickable: true }}
                 loop={true}
-                speed={1000}
+                speed={100}
                 parallax={true}
-                navigation
+                navigation={true}
             >
+                <SwiperSlide>
+                    <div className="swiper-slide">
+                        <div className="slide-inner slide-bg-image" style={{ backgroundImage: `url(${hero11})` }}>
+                        </div>
+                    </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                    <div className="swiper-slide">
+                        <div className="slide-inner slide-bg-image" style={{ backgroundImage: `url(${hero12})` }}>
+                        </div>
+                    </div>
+                </SwiperSlide>
                 <SwiperSlide>
                     <div className="swiper-slide">
                         <div className="slide-inner slide-bg-image" style={{ backgroundImage: `url(${hero10})` }}>

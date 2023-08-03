@@ -15,9 +15,9 @@ const Hero4 = (props) => {
                             <div className="col-lg-6">
                                 <div className="wpo-event-item">
                                     <div className="wpo-event-text">
-                                    <div className="img-holder right-align-text fadeInLeftSlow" data-wow-duration="1500ms">
+                                    {/*<div className="img-holder right-align-text fadeInLeftSlow" data-wow-duration="1500ms">
                                             <img src={iImg1} className="img img-responsive" alt="stroy"/>
-                                        </div>
+                                            </div>*/}
                                         {/*}
                                         <h2>Lina & Diego</h2>
                                         <h2>Wedding day</h2>
