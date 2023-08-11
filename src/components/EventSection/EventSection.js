@@ -39,8 +39,8 @@ const Events = [
         li4:'+1 516-334-0021',
         li5:'Time: The religious ceremony will start promptly at 4:15pm.',
         li6:'Hora: La ceremonia relegiosa comenzará a las 4:15pm hora exacta.',
-        li7:'Parking: There is a parking lot across the Parish. Post Rd is a extremely busy street on Sundays. Make plans to arrive at least 15 minutes earlier.',
-        li8:'Estacionamiento: Hay un estacionamiento al frente de la Parroquia. La calle "Post Ave" es muy congestionada los Domingos. Haga planes para llegar 15 minutos antes.'
+        li7:'Parking: There are two parking lots, one across the Parish, the second one to the right of the Parish(past the gazebo). Post Rd is a extremely busy street on Sundays. Make plans to arrive at least 15 minutes earlier.',
+        li8:'Estacionamiento: Hay dos playas de estacionamiento, el primero esta frente de la Parroquia, la segunda a el lado derecho de la Parroquia(despues de la gazebo). La calle "Post Ave" es muy congestionada los Domingos. Haga planes para llegar 15 minutos antes.'
     },
     {
         title:'Cocktail Reception & Dinner',

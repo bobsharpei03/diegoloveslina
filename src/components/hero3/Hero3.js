@@ -26,8 +26,9 @@ const Hero3 = (props) => {
                 <div className="couple-text">
                     <h2>Lina & Diego</h2>
                     <p>We Are Getting Married Sep 3, 2023</p>
-                    <p>Last Day to RSVP is August 5th</p>
-                    <p>Please confirm your attendance so we can assign you a table</p>
+                    <p>Thanks to all friends and family who have RSVP</p>
+                    <p>The guest list is close at this time</p>
+                    <p>Only VIP guests who have received invitation August 7th, 2023 have until August 11th, 2023 to RSVP </p>
                     <div className="wpo-wedding-date">
                         <div className="clock-grids">
                             <TimeCountDown/>
