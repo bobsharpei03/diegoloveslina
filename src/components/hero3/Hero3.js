@@ -23,12 +23,11 @@ const Hero3 = (props) => {
     return (
         <section className="wpo-hero-slider wpo-hero-style-3" id="hero3">
             <div className="wedding-announcement">
-                <div className="couple-text">
-                    <h2>Lina & Diego</h2>
-                    <p>We Are Getting Married Sep 3, 2023</p>
+                <div className="couple-text">                    
+                    {/*<p>We Are Getting Married Sep 3, 2023</p>*/}
                     <p>Thanks to all friends and family who have RSVP</p>
                     <p>The guest list is close at this time</p>
-                    <p>Only VIP guests who have received invitation August 7th, 2023 have until August 11th, 2023 to RSVP </p>
+                    <h2>Lina & Diego</h2>
                     <div className="wpo-wedding-date">
                         <div className="clock-grids">
                             <TimeCountDown/>

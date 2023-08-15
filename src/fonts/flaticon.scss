@@ -57,6 +57,7 @@ $flaticon-map: (
     "next": "\f122",
     "balloon": "\f123",
     "dance": "\f124",
+    "portal-exit": "\f125",
 );
 
 .flaticon-email:before {
@@ -166,4 +167,7 @@ $flaticon-map: (
 }
 .flaticon-dance:before {
     content: map-get($flaticon-map, "dance");
+}
+.flaticon-dance:before {
+    content: map-get($flaticon-map, "portal-exit");
 }

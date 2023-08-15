@@ -1,7 +1,8 @@
-import React from 'react'
-import { Link } from 'react-scroll'
-import { NavLink } from 'react-router-dom'
-import MobileMenu from '../MobileMenu/MobileMenu'
+import React from 'react';
+import { Link } from 'react-scroll';
+import { NavLink } from 'react-router-dom';
+import MobileMenu from '../MobileMenu/MobileMenu';
+import { getAuth, signOut } from 'firebase/auth';
 
 
 const Header = (props) => {
@@ -84,10 +85,20 @@ const Header = (props) => {
               </div>
               <div className="col-lg-2 col-md-2 col-2">
                 <div className="header-right">
-                  <NavLink className="theme-btn" to="/rsvp"><span className="text">RSVP</span> <span className="mobile">
+                  <NavLink className="theme-btn" to="/rsvp">
+                    <span className="text">RSVP</span>
+                    <span className="mobile">
                     {/*<i className="fi flaticon-user"></i>*/}
                     <i className="fi flaticon-wedding-rings"></i>
-                  </span></NavLink>
+                    </span>
+                  </NavLink>
+                  <NavLink className="theme-btn" to="/login">
+                  <span className="text">Logout</span>
+                  <span className="mobile">
+                    {/*<i className="fi flaticon-user"></i>*/}
+                    <i className="fi flaticon-right-arrow-1"></i>
+                    </span>
+                  </NavLink>
                 </div>
               </div>
             </div>
