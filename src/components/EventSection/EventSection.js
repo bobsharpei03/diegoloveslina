@@ -2,7 +2,28 @@ import React from 'react';
 import LocationMap from '../Modal';
 import SectionTitleS2 from '../SectionTitleS2';
 
+
 const Accomodations = [
+    {
+        title1:'Special String Performance',
+        li1:'As part of the evening festivities, the couple will be offering a live string performance before Mass begins',
+        li2:'You may take a seats behind the second row at 4:30pm if you want to enjoy a live string concert.',
+        li3:'(Parents and siblings, first and second row)',
+        li4:'Performance Group: VSMUSIC4U',
+        li5:'Ensemble type: Trio of String (Violin, Viola & Violoncello)',
+        li6:'Ensemble Director: Vinny',
+        li7:'Special thanks to the groom\'s Mother for sponsoring this music performance',
+        title2: 'Concierto de Cuerdas',
+        li8: 'Como parte de la festividades de la noche, la pareja ofrecera un mini concierto de violines antes de las Misa',
+        li9:'Porfavor tomen asiento despues de la segunda fila a las 4:30pm, si desean disfrutar de la musica en vivo',
+        li10:'(Padres y hermanos en la primera y segunda fila)',
+        li11:'Nombre del Grupo: VSMUSIC4U',
+        li12:'Estilo: Trio de Cuerdas (Violin, Viola & ViolonCello)',
+        li13:'Director del trio de cuerdas: Vinny',
+        li14: 'Agradecimiento especial a la Madre del novio por patrocinar esta actuacion especial',
+    },
+]
+/*const Accomodations = [
     {
         title1:'Accomodation',
         li1:'Westbury, NY is located 45 minutes from New York City. We will not discourage out traveling guests from staying in Manhattan. We are sure the city has much more to offer, but traveling times can be less than ideal. For your convenience we have made a block reservation near the Church and Venue.',
@@ -19,7 +40,7 @@ const Accomodations = [
         li11:'Código de Descuento: FMWEDD',
         li12: 'Es muy recomendable buscar hospedaje en páginas web como airbnb.com',
     },
-]
+]*/
 const Information = [
     {
         title1:'Our small ones will be missed',
@@ -34,13 +55,13 @@ const Events = [
     {
         title:'Religious Ceremony',
         li1:'St. Brigid Catholic Parish',
-        li2:'Sunday, 03 Sep, 2023 4:15 PM – 5:15 PM',
+        li2:'Sunday, 03 Sep, 2023 4:30 PM – 5:45 PM',
         li3:'85 Post Ave. Westbury, NY 11590, USA',
         li4:'+1 516-334-0021',
-        li5:'Time: The religious ceremony will start promptly at 4:15pm.',
-        li6:'Hora: La ceremonia relegiosa comenzará a las 4:15pm hora exacta.',
-        li7:'Parking: There are two parking lots, one across the Parish, the second one to the right of the Parish(past the gazebo). Post Rd is a extremely busy street on Sundays. Make plans to arrive at least 15 minutes earlier.',
-        li8:'Estacionamiento: Hay dos playas de estacionamiento, el primero esta frente de la Parroquia, la segunda a el lado derecho de la Parroquia(despues de la gazebo). La calle "Post Ave" es muy congestionada los Domingos. Haga planes para llegar 15 minutos antes.'
+        li5:'Time: The religious ceremony will start promptly at 4:45pm.',
+        li6:'Hora: La ceremonia relegiosa comenzará a las 4:45pm hora exacta.',
+        li7:'Parking: There are two parking lots, one across the Parish, the second one to the right of the Parish(past the gazebo). Post Rd is a extremely busy street on Sundays.',
+        li8:'Estacionamiento: Hay dos playas de estacionamiento, el primero esta frente de la Parroquia, la segunda a el lado derecho de la Parroquia(despues de la gazebo). La calle "Post Ave" es muy congestionada los Domingos.'
     },
     {
         title:'Cocktail Reception & Dinner',
@@ -64,20 +85,30 @@ const EventSection = (props) => {
                 <SectionTitleS2 MainTitle={'Details / Detalles'} />
                 <div className="wpo-event-wrap">
                     <div className="row">
-                        {Information.map((information, eitem) => (
-                            <div className="col col-lg-12 col-md-6 col-12" key={eitem}>
+                        {Accomodations.map((accomodations, eitem) => (
+                            <div className="col col-lg-12 col-md-12 col-12" key={eitem}>
                                 <div className="wpo-event-item">
                                     <div className="wpo-event-text">
-                                        <h2>{information.title1}</h2>
+                                        <h2>{accomodations.title1}</h2>
                                         <ul>
-                                            <li>{information.li1}</li>
-                                            <li>{information.li2}</li>                                                                   
+                                            <li>{accomodations.li1}</li>
+                                            <li>{accomodations.li2}</li>                                                                   
+                                            <li>{accomodations.li3}</li>                                                                   
+                                            <li>{accomodations.li4}</li>                                                                   
+                                            <li>{accomodations.li5}</li>                                                                   
+                                            <li>{accomodations.li6}</li>                                                                   
+                                            <li>{accomodations.li7}</li>                                                                   
                                             {/*<li><LocationMap/></li>*/}
                                         </ul>
-                                        <h2>{information.title2}</h2>
+                                        <h2>{accomodations.title2}</h2>
                                         <ul>
-                                            <li>{information.li3}</li>
-                                            <li>{information.li4}</li> 
+                                            <li>{accomodations.li8}</li>
+                                            <li>{accomodations.li9}</li>
+                                            <li>{accomodations.li10}</li>
+                                            <li>{accomodations.li11}</li>
+                                            <li>{accomodations.li12}</li>
+                                            <li>{accomodations.li13}</li>
+                                            <li>{accomodations.li14}</li>
                                         </ul>
                                     </div>
                                 </div>
@@ -88,7 +119,7 @@ const EventSection = (props) => {
                 <div className="wpo-event-wrap">
                     <div className="row">
                         {Events.map((event, eitem) => (
-                            <div className="col col-lg-6 col-md-6 col-12" key={eitem}>
+                            <div className="col col-lg-12 col-md-12 col-12" key={eitem}>
                                 <div className="wpo-event-item">
                                     <div className="wpo-event-text">
                                         <h2>{event.title}</h2>
@@ -113,28 +144,20 @@ const EventSection = (props) => {
                 </div>
                 <div className="wpo-event-wrap">
                     <div className="row">
-                        {Accomodations.map((accomodations, eitem) => (
+                        {Information.map((information, eitem) => (
                             <div className="col col-lg-12 col-md-6 col-12" key={eitem}>
                                 <div className="wpo-event-item">
                                     <div className="wpo-event-text">
-                                        <h2>{accomodations.title1}</h2>
+                                        <h2>{information.title1}</h2>
                                         <ul>
-                                            <li>{accomodations.li1}</li>
-                                            <li>{accomodations.li2}</li>                                                                   
-                                            <li>{accomodations.li3}</li>                                                                   
-                                            <li>{accomodations.li4}</li>                                                                   
-                                            <li>{accomodations.li5}</li>                                                                   
-                                            <li>{accomodations.li6}</li>                                                                   
+                                            <li>{information.li1}</li>
+                                            <li>{information.li2}</li>                                                                
                                             {/*<li><LocationMap/></li>*/}
                                         </ul>
-                                        <h2>{accomodations.title2}</h2>
+                                        <h2>{information.title2}</h2>
                                         <ul>
-                                            <li>{accomodations.li7}</li>
-                                            <li>{accomodations.li8}</li>
-                                            <li>{accomodations.li9}</li>
-                                            <li>{accomodations.li10}</li>
-                                            <li>{accomodations.li11}</li>
-                                            <li>{accomodations.li12}</li>
+                                            <li>{information.li3}</li>
+                                            <li>{information.li4}</li> 
                                         </ul>
                                     </div>
                                 </div>
