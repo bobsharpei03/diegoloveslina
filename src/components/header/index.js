@@ -1,9 +1,8 @@
-import React from 'react';
+import React, { useState, useEffect} from 'react';
 import { Link } from 'react-scroll';
 import { NavLink } from 'react-router-dom';
 import MobileMenu from '../MobileMenu/MobileMenu';
-import { getAuth, signOut } from 'firebase/auth';
-
+import SignOutButton from '../../components/SignOutButton';
 
 const Header = (props) => {
 
@@ -22,13 +21,13 @@ const Header = (props) => {
                   <MobileMenu />
                 </div>
               </div>
-              <div className="col-lg-2 col-md-6 col-6">
+              <div className="col-lg-3 col-md-6 col-6">
                 <div className="navbar-header">
                   <NavLink className="navbar-brand logo" to='/'><small>Diego</small>loves<small>Lina.com</small>
                   <span><i className="fi flaticon-dove"></i></span></NavLink>
                 </div>
               </div>
-              <div className="col-lg-8 col-md-1 col-1">
+              <div className="col-lg-6 col-md-1 col-1">
                 <div id="navbar" className="collapse navbar-collapse navigation-holder">
                   <button className="menu-close"><i className="ti-close"></i></button>
                   <ul className="nav navbar-nav mb-2 mb-lg-0">
@@ -83,7 +82,7 @@ const Header = (props) => {
                   </ul>
                 </div>
               </div>
-              <div className="col-lg-2 col-md-2 col-2">
+              <div className="col-lg-3 col-md-2 col-2">
                 <div className="header-right">
                   <NavLink className="theme-btn" to="/rsvp">
                     <span className="text">RSVP</span>
@@ -92,13 +91,15 @@ const Header = (props) => {
                     <i className="fi flaticon-wedding-rings"></i>
                     </span>
                   </NavLink>
-                  <NavLink className="theme-btn" to="/login">
-                  <span className="text">Logout</span>
-                  <span className="mobile">
-                    {/*<i className="fi flaticon-user"></i>*/}
+                  <SignOutButton/>
+                  {/*<NavLink className="theme-btn" to="/login">
+                    <span className="text">Logout</span>
+                    <span className="mobile">
+                    {/*<i className="fi flaticon-user"></i>
                     <i className="fi flaticon-right-arrow-1"></i>
                     </span>
-                  </NavLink>
+                          </NavLink>*/}
+ 
                 </div>
               </div>
             </div>

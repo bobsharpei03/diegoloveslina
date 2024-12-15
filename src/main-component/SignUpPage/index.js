@@ -1,56 +1,86 @@
-import React, {useState} from 'react';
+import React, {useRef, useState} from 'react';
 import Grid from "@material-ui/core/Grid";
 import SimpleReactValidator from "simple-react-validator";
 import {toast} from "react-toastify";
 import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
 import {Link, useNavigate} from "react-router-dom";
-
-
+import { useAuth } from '../../context/AuthContext';
+import { db } from '../../firebase/firebase';
+import { doc, setDoc } from "firebase/firestore"; 
 import './style.scss';
 
 const SignUpPage = (props) => {
 
-    const push = useNavigate()
-
-    const [value, setValue] = useState({
-        email: '',
-        full_name: '',
-        password: '',
-        confirm_password: '',
-    });
+    const { signUp, currentUser } = useAuth();    
+    const push = useNavigate();
+    //const passwordConfirmRef = useRef()
+    const [error, setError] = useState('');
+    const [buttonVisibility, setButtonVisibility] = useState(false);
+    const [value, setValue] = useState({});
 
     const changeHandler = (e) => {
-        setValue({...value, [e.target.name]: e.target.value});
-        validator.showMessages();
+        console.log({...value, [e.target.name]: e.target.value});
+        setValue({
+            ...value,
+            [e.target.name]: e.target.value});
+            textValidator.showMessages();
     };
 
-    const [validator] = React.useState(new SimpleReactValidator({
-        className: 'errorMessage'
-    }));
+    const [textValidator] = React.useState(new SimpleReactValidator({className: 'errorMessage'}));
 
+    const passwordMatch = () => {
+        if(value.password !== value.confirm_password){
+            return toast.error('Password do not match');
+        }
+    }
 
-    const submitForm = (e) => {
+    const submitForm = async (e) => {
         e.preventDefault();
-        if (validator.allValid()) {
+        passwordMatch();
+        /*if (validator.allValid()) {
             setValue({
                 email: '',
                 full_name: '',
                 password: '',
                 confirm_password: '',
-            });
-            validator.hideMessages();
-            toast.success('Registration Complete successfully!');
-            push('/login');
-        } else {
-            validator.showMessages();
-            toast.error('Empty field is not allowed!');
+            });*/
+            //validator.hideMessages();
+            //success
+            try{
+                if (textValidator.allValid()) {               
+                setError('');
+                setButtonVisibility(true);
+                console.log('passed email ' + value.email + 'passed password ' + value.password)
+                let specialuuId = await signUp(value.email, value.password);
+                console.log('auth created');
+                console.log('SignUp currentUser.uid#### ' + specialuuId);
+                await setDoc(doc(db, "usersCollection", specialuuId ), {
+                    email: value.email,
+                    first_name: value.first_name,
+                    last_name: value.last_name
+                  });
+                console.log('db linked');
+                setValue({
+                    first_name: '',
+                    last_name_name: '',
+                    email: '',
+                    password: '',
+                    confirm_password: '',
+                });
+                toast.success('Registration Complete successfully!');             
+                push('/login');           
+                }
+                } catch {
+                    toast.error('Failed to create an account');               
+            }
+            setButtonVisibility(false);
         }
-    };
+
     return (
         <Grid className="loginWrapper">
-
             <Grid className="loginForm">
+                {currentUser && currentUser.email}
                 <h2>Signup</h2>
                 <p>Signup your account</p>
                 <form onSubmit={submitForm}>
@@ -59,18 +89,37 @@ const SignUpPage = (props) => {
                             <TextField
                                 className="inputOutline"
                                 fullWidth
-                                placeholder="Full Name"
-                                value={value.full_name}
+                                placeholder="First Name"
+                                value={value.first_name}
                                 variant="outlined"
-                                name="full_name"
-                                label="Name"
+                                name="first_name"
+                                label="First Name"
+                                type="text"
                                 InputLabelProps={{
                                     shrink: true,
                                 }}
                                 onBlur={(e) => changeHandler(e)}
                                 onChange={(e) => changeHandler(e)}
                             />
-                            {validator.message('full name', value.full_name, 'required|alpha')}
+                            {textValidator.message('First Name', value.first_name, 'required|alpha')}
+                        </Grid>
+                        <Grid item xs={12}>
+                            <TextField
+                                className="inputOutline"
+                                fullWidth
+                                placeholder="Last Name"
+                                value={value.last_name}
+                                variant="outlined"
+                                name="last_name"
+                                label="Last Name"
+                                type="text"
+                                InputLabelProps={{
+                                    shrink: true,
+                                }}
+                                onBlur={(e) => changeHandler(e)}
+                                onChange={(e) => changeHandler(e)}
+                            />
+                            {textValidator.message('First Name', value.last_name, 'required|alpha')}
                         </Grid>
                         <Grid item xs={12}>
                             <TextField
@@ -81,13 +130,14 @@ const SignUpPage = (props) => {
                                 variant="outlined"
                                 name="email"
                                 label="E-mail"
+                                type="text"
                                 InputLabelProps={{
                                     shrink: true,
                                 }}
                                 onBlur={(e) => changeHandler(e)}
                                 onChange={(e) => changeHandler(e)}
                             />
-                            {validator.message('email', value.email, 'required|email')}
+                            {textValidator.message('email', value.email, 'required|email')}
                         </Grid>
                         <Grid item xs={12}>
                             <TextField
@@ -98,35 +148,39 @@ const SignUpPage = (props) => {
                                 variant="outlined"
                                 name="password"
                                 label="Password"
+                                type="password"
                                 InputLabelProps={{
                                     shrink: true,
                                 }}
                                 onBlur={(e) => changeHandler(e)}
                                 onChange={(e) => changeHandler(e)}
                             />
-                            {validator.message('password', value.password, 'required')}
+                            {textValidator.message('password', value.password, 'required')}
                         </Grid>
                         <Grid item xs={12}>
                             <TextField
                                 className="inputOutline"
                                 fullWidth
                                 placeholder="Confirm Password"
-                                value={value.password}
+                                value={value.confirm_password}
                                 variant="outlined"
                                 name="confirm_password"
                                 label="Confirm Password"
+                                type="password"
                                 InputLabelProps={{
                                     shrink: true,
                                 }}
                                 onBlur={(e) => changeHandler(e)}
                                 onChange={(e) => changeHandler(e)}
                             />
-                            {validator.message('confirm password', value.confirm_password, `in:${value.password}`)}
+                            {textValidator.message('confirm password', value.confirm_password, `in:${value.confirm_password}`)}
                         </Grid>
+                        {/*This is the main Button begins*/}
                         <Grid item xs={12}>
                             <Grid className="formFooter">
-                                <Button fullWidth className="cBtn cBtnLarge cBtnTheme" type="submit">Sign Up</Button>
+                                <Button disable={buttonVisibility} fullWidth className="cBtn cBtnLarge cBtnTheme" type="submit">Sign Up</Button>
                             </Grid>
+                            {/*This is the main Button Ends*/}
                             <Grid className="loginWithSocial">
                                 <Button className="facebook"><i className="fa fa-facebook"></i></Button>
                                 <Button className="twitter"><i className="fa fa-twitter"></i></Button>

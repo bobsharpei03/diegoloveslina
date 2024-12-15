@@ -3,6 +3,7 @@ import "firebase/compat/auth";
 import "firebase/compat/firestore";
 import 'firebase/compat/database'
 import Axios from 'axios';
+//import { getAuth } from "firebase/auth";
 
 const firebaseConfig = {
   apiKey: "AIzaSyCbEX381cUubutIt1Kltek-TppZGqTdvK0",
@@ -14,11 +15,12 @@ const firebaseConfig = {
   appId: "1:1031199124554:web:e58daf21b47c202a538ab3"
   };
 
-  firebase.initializeApp(firebaseConfig);
+  const app = firebase.initializeApp(firebaseConfig);
 
   const db = firebase.firestore();
+  const auth = app.auth();
 
   Axios.defaults.withCredentials = true;
 
-  export {Axios, db}
+  export {Axios, db, auth}
   //export default firebase;

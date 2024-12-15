@@ -3,10 +3,8 @@ import SimpleReactValidator from 'simple-react-validator';
 import SectionTitle from '../../components/SectionTitle';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-
 import vec1 from '../../images/rsvp/flower1.png';
 import vec2 from '../../images/rsvp/flower2.png';
-
 import shape1 from '../../images/rsvp/shape1.png';
 import shape2 from '../../images/rsvp/shape2.png';
 //import {v4 as uuidv4} from 'uuid';
@@ -33,6 +31,19 @@ const RSVP = (props) => {
         id: ''       
     });*/
 
+    const submitHandler = e => {        
+        e.preventDefault();
+        console.log("forms", forms);
+        if (validator.allValid()) {
+            console.log("submit success");
+            validator.hideMessages();
+            sendMail();
+            
+        } else {
+            console.log("submit error");
+            validator.showMessages();
+        }
+    }
  
 
     const handleChange = (e) => {
@@ -54,7 +65,7 @@ const RSVP = (props) => {
             console.error(err);
           });
       }
-    const changeHandler = e => {
+    const changeHandler = (e) => {
         console.log(e.target.name, e.target.value);
         setForms({ 
             ...forms,
@@ -67,20 +78,6 @@ const RSVP = (props) => {
         }
     };
 
-    const submitHandler = e => {        
-        e.preventDefault();
-        console.log("forms", forms);
-        if (validator.allValid()) {
-            console.log("submit success");
-            validator.hideMessages();
-            sendMail();
-            
-        } else {
-            console.log("submit error");
-            validator.showMessages();
-        }
-    }
-//https://us-central1-project-1-1557190380231.cloudfunctions.net/submit
     const sendMail = async () => {
         console.log("sendMail");
         const res = await fetch('https://us-central1-project-1-1557190380231.cloudfunctions.net/submit', {
@@ -92,8 +89,10 @@ const RSVP = (props) => {
             body: JSON.stringify(forms)
         });
         const json = await res.json();
-        console.log(json);
-
+        //console.log(json);
+        saveTodb();
+    }
+    const saveTodb = () =>{
         db.collection('RSVP').add({
             Attend: forms.Attend,
             Email: forms.Email,
@@ -171,7 +170,7 @@ const RSVP = (props) => {
                                     onChange={(e) => changeHandler(e)}
                                     className="form-control"
                                     placeholder="Your Email" />
-                                {validator.message('Email', forms.Email, 'required|Email')}
+                                {validator.message('Email', forms.Email, 'required|email')}
                             </div>
                             <div className="form-field">
                                 <label>What song you would like dancing in the party?</label>

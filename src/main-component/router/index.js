@@ -1,5 +1,6 @@
 import React from 'react';
 import { HashRouter, BrowserRouter, Routes, Route, } from "react-router-dom";
+import  { AuthProvider } from '../../context/AuthContext';
 
 import Homepage from '../HomePage'
 import Homepage2 from '../HomePage2/HomePage2'
@@ -37,7 +38,7 @@ import ForgotPassword from '../ForgotPassword'
 const AllRoute = () => {
 
   return (
-    <div className="App">
+    <div className="App">       
       <HashRouter>
         <Routes>
           <Route path='/' element={<Homepage />} />
@@ -71,7 +72,7 @@ const AllRoute = () => {
           <Route path='blog-left-sidebar' element={<BlogPageLeft />} />
           <Route path='blog-fullwidth' element={<BlogPageFullwidth />} />
           <Route path='login' element={<LoginPage />} />
-          <Route path='register' element={<SignUpPage />} />
+          <Route path='signup' element={<SignUpPage />} />
           <Route path='forgot-password' element={<ForgotPassword />} />
         </Routes>
       </HashRouter>

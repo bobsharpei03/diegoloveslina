@@ -1,12 +1,14 @@
+import { useEffect } from "react";
 import React from "react";
 import Header from '../header';
 
-export default function Navbar(props) {
-  const [scroll, setScroll] = React.useState(0);
+//export default function Navbar(props) {
+const Navbar = (props) => {
 
+  const [scroll, setScroll] = React.useState(0);
   const handleScroll = () => setScroll(document.documentElement.scrollTop);
 
-  React.useEffect(() => {
+  useEffect(() => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -19,3 +21,4 @@ export default function Navbar(props) {
     </div>
   ); 
 }
+export default Navbar;

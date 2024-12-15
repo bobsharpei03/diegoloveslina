@@ -24,13 +24,13 @@ const Hero3 = (props) => {
         <section className="wpo-hero-slider wpo-hero-style-3" id="hero3">
             <div className="wedding-announcement">
                 <div className="couple-text">                    
-                    {/*<p>We Are Getting Married Sep 3, 2023</p>*/}
-                    <p>Thanks to all friends and family who have RSVP</p>
-                    <p>The guest list is close at this time</p>
+                    {/*<p>We Are Getting Married Sep 3, 2023</p>*/}               
+                    <p>Thanks for being part of our special day </p>
                     <h2>Lina & Diego</h2>
+                    <h2>Happy Holidays!!!</h2>
                     <div className="wpo-wedding-date">
                         <div className="clock-grids">
-                            <TimeCountDown/>
+                            {/*<TimeCountDown/>*/}
                         </div>
                     </div>
                 </div>
@@ -82,9 +82,7 @@ const Hero3 = (props) => {
                 </SwiperSlide>
                 ...
             </Swiper>
-
         </section>
     )
 }
-
 export default Hero3;
